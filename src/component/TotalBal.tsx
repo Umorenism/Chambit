@@ -11,7 +11,7 @@ export const TotalBal = () => {
           <h2 className="flex justify-center items-center gap-1 outline-none border-none bg-none text-xl text-white">
             46.68 <span>USD</span>
           </h2>
-          <p className="p-1">= 0.00000000784 BTC</p>
+          <p className="p-1">= 0.00000784 BTC</p>
         </div>
         <div className="w-1/2  px-4">
           <button className="px-4 py-1 rounded-sm bg-orange-500 ">

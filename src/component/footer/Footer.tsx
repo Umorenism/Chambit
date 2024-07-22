@@ -11,21 +11,23 @@ const footerItmems = [
   {
     title: "Home",
     icons: <FaMessage />,
-    link: "/",
+    path: "/",
   },
   {
-    title: "Marketing",
+    title: "Market",
     icons: <FaMarker />,
-    link: "/marketer",
+    path: "/market",
   },
 
   {
     title: "Sport",
     icons: <FaBaseball />,
+    path: "/sport",
   },
   {
     title: "Assets",
     icons: <FaGlassWater />,
+    path: "/asset",
   },
 ];
 
@@ -38,7 +40,7 @@ export const Footer = () => {
             key={index}
             className="text-white hover:text-orange-500 gap-2 flex items-center justify-center"
           >
-            <Link to="/">
+            <Link to={item.path}>
               <div>{item.icons}</div>
               <p>{item.title}</p>
             </Link>

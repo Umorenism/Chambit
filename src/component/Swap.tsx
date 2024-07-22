@@ -18,7 +18,7 @@ export const Swap = () => {
         {carditem.map((item, index) => (
           <div
             key={index}
-            className=" w-1/2 py-2 justify-center flex flex-col items-center"
+            className=" w-1/2 py-4 justify-center flex flex-col items-center bg-slate-200 text-blue-500 rounded-lg shadow-lg hover:bg-orange-600 hover:text-white"
           >
             <div>{item.icon}</div>
             <p>{item.title}</p>
