@@ -18,10 +18,7 @@ const footerItmems = [
     icons: <FaMarker />,
     link: "/marketer",
   },
-  {
-    title: "Derivatives",
-    icons: <FaScrewdriverWrench />,
-  },
+
   {
     title: "Sport",
     icons: <FaBaseball />,
