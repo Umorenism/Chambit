@@ -3,7 +3,6 @@ import { FaWallet } from "react-icons/fa6";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { FaAngleRight } from "react-icons/fa6";
 import { LuArrowDownUp } from "react-icons/lu";
-import { RiBankLine } from "react-icons/ri";
 
 export const SwapComp = () => {
   return (
@@ -14,40 +13,46 @@ export const SwapComp = () => {
       <hr />
       <div className="mt-10">
         <div className=" px-4 mb-4 ">
-          <div className="bg-slate-500 py-5 text-orange-500 rounded-lg relative">
+          <div className="bg-gray-600 py-5 text-white rounded-lg relative">
             <div className="flex justify-between p-2 text-lg">
               <p className="flex justify-center items-center">
                 From BNB SSmart Chain <RiArrowDropDownLine size={30} />
               </p>
               <p className="flex justify-center items-center gap-1">
-                <FaWallet />0
+                <FaWallet className="text-gray-100" />
+                <span className=" text-orange-500">0</span>
               </p>
             </div>
             <div className="flex justify-between p-2 text-lg">
               <p className="flex justify-center items-center text-xl font-bold">
                 BNB <FaAngleRight />
               </p>
-              <p>0</p>
+              <p>
+                0 <span className="text-orange-500">Max</span>
+              </p>
             </div>
           </div>
-          <div className="h-10 w-10 rounded-full bg-slate-200 flex justify-center items-center absolute top-[260px] left-44">
-            <LuArrowDownUp size={25} className="text-gray-950" />
+          <div className="h-10 w-10 rounded-full bg-orange-500 flex justify-center items-center absolute top-[260px] left-44">
+            <LuArrowDownUp size={25} className="text-white  " />
           </div>
           {/* card2 */}
-          <div className="bg-slate-500 py-5 mt-2 text-orange-500 rounded-lg">
+          <div className="bg-gray-600 text-white py-5 mt-2  rounded-lg">
             <div className="flex justify-between p-2 text-lg">
               <p className="flex justify-center items-center">
                 From BNB SSmart Chain <RiArrowDropDownLine size={30} />
               </p>
               <p className="flex justify-center items-center gap-1">
-                <FaWallet />0
+                <FaWallet />
+                <span className="text-orange-500">0</span>
               </p>
             </div>
             <div className="flex justify-between p-2 text-lg">
               <p className="flex justify-center items-center text-xl font-bold">
                 BNB <FaAngleRight />
               </p>
-              <p>0</p>
+              <p>
+                0 <span className="text-orange-500">Max</span>
+              </p>
             </div>
           </div>
         </div>

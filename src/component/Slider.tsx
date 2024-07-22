@@ -6,7 +6,7 @@ export const Slider = () => {
       <h1>A8 launchpool Stake A8, USDT or MTN to</h1>
       <p className="mt-3 flex items-center gap-2">
         Earn a share of 9,000,000 A8{" "}
-        <button className="px-4 bg-orange-400 py-1 rounded-full">
+        <button className="px-4 bg-orange-500 py-1 text-white rounded-full">
           <FaArrowRight />
         </button>
       </p>
