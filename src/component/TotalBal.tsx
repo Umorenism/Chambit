@@ -14,7 +14,7 @@ export const TotalBal = () => {
           <p className="p-1">= 0.00000784 BTC</p>
         </div>
         <div className="w-1/2  px-4">
-          <button className="px-4 py-1 rounded-sm bg-orange-500 ">
+          <button className="px-5 py-3 rounded-sm bg-orange-500 ">
             Deposite
           </button>
         </div>
