@@ -16,10 +16,14 @@ export const OrderBook = () => {
       </div>
       <div className="px-4 flex justify-between mt-4">
         <Link to="/chart">
-          <button className="bg-green-500 px-10 py-2 rounded-md">Chart</button>
+          <button className="bg-gray-500 text-white font-bold px-10 py-2 rounded-md text-xl">
+            Chart
+          </button>
         </Link>
         <Link to="/chart">
-          <button className="bg-red-500 px-10 py-2 rounded-md">Chart</button>
+          <button className="text-white font-bold hover:bg-gray-500 transition text-xl duration-300 px-10 py-2 rounded-md">
+            Trade
+          </button>
         </Link>
       </div>
       {/* graph */}

@@ -2,6 +2,7 @@ import { FaBell, FaCircleUser } from "react-icons/fa6";
 import { IoMdHeadset } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import logo from "../../../asset/chambit.svg";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,9 +30,10 @@ export const Navbar = () => {
           </div>
         )}
         <div>
-          <button className="bg-white px-5 py-2 rounded-lg hover:bg-orange-500 font-bold text-blue-500">
+          {/* <button className="bg-white px-5 py-2 rounded-lg hover:bg-orange-500 font-bold text-blue-500">
             CHAMBIT
-          </button>
+          </button> */}
+          <img src={logo} alt="logo" className="h-10 w-40" />
         </div>
         <div className="flex gap-4">
           <IoMdHeadset className="text-white" size={25} />

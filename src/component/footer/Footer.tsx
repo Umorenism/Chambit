@@ -8,9 +8,9 @@ const footerItmems = [
     path: "/",
   },
   {
-    title: "Market",
+    title: "P2P",
     icons: <FaMarker />,
-    path: "/market",
+    path: "/pp",
   },
 
   {

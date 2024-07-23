@@ -7,10 +7,11 @@ import { Login } from "./Login/Login.tsx";
 import { Signup } from "./Signup/Signup.tsx";
 import { Market } from "./component/Market.tsx";
 import { Asset } from "./component/Asset.tsx";
-import { Sport } from "./component/Sport.tsx";
+
 import { SwapComp } from "./component/SwapComp.tsx";
 import { PtoP } from "./component/PtoP.tsx";
 import { OrderBook } from "./component/OrderBook.tsx";
+import { Spot } from "./component/Spot.tsx";
 
 const router = createBrowserRouter([
   {
@@ -38,10 +39,7 @@ const router = createBrowserRouter([
         path: "/asset",
         element: <Asset />,
       },
-      {
-        path: "/sport",
-        element: <Sport />,
-      },
+
       {
         path: "/swap",
         element: <SwapComp />,
@@ -54,6 +52,10 @@ const router = createBrowserRouter([
         path: "/orderbook",
         element: <OrderBook />,
       },
+      // {
+      //   path: "/spot",
+      //   element: <Spot />,
+      // },
     ],
   },
 ]);

@@ -150,10 +150,27 @@ export const SwapComp = () => {
               <CgSwap />
             </div>
           </div>
-          <button className=" w-full mt-5 py-4 rounded-xl text-white hover:bg-orange-600 duration-300 transition-all ease-in bg-blue-500 ">
+          <button className=" w-full mt-5 py-4 rounded-xl text-white bg-gray-600 text-xl ">
             Continue
           </button>
-          <div className="bg-red-500 mt-3 py-14 px-4">hello</div>
+          <div className="text-white mt-3 py-4 h-auto px-4">
+            <div className="flex justify-between gap-14">
+              <div className="w-1/2 py-6 p-4">
+                <ul>
+                  <li>Provider</li>
+                  <li>Provider fee</li>
+                  <li>Slippage tolerance</li>
+                </ul>
+              </div>
+              <div className="w-1/2 py-6 p-4">
+                <ul>
+                  <li>0x</li>
+                  <li>47356 DONS (=$3.59)</li>
+                  <li>7.0%</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
