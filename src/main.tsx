@@ -10,6 +10,7 @@ import { Asset } from "./component/Asset.tsx";
 import { Sport } from "./component/Sport.tsx";
 import { SwapComp } from "./component/SwapComp.tsx";
 import { PtoP } from "./component/PtoP.tsx";
+import { OrderBook } from "./component/OrderBook.tsx";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/pp",
         element: <PtoP />,
+      },
+      {
+        path: "/orderbook",
+        element: <OrderBook />,
       },
     ],
   },

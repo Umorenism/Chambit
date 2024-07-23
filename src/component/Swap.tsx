@@ -1,4 +1,3 @@
-import { FaSdCard } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { RiSwapFill } from "react-icons/ri";
 import { GiTrade } from "react-icons/gi";
@@ -33,7 +32,7 @@ export const Swap = () => {
         {carditem.map((item, index) => (
           <div
             key={index}
-            className=" w-1/2 py-4 justify-center flex flex-col items-center bg-gray-600 rounded-lg shadow-lg text-white"
+            className=" w-1/2 py-4 justify-center flex flex-col items-center bg-gray-600 rounded-lg shadow-lg text-white hover:bg-blue-600 transition-all ease-in duration-300"
           >
             <Link to={item.path}>
               <div>{item.icon}</div>

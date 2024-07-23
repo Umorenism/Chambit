@@ -18,8 +18,9 @@ export const Login = () => {
               placeholder="Email"
               className=" w-full py-2 rounded-md
             border 
+            bg-transparent
             p-2
-            outline-none hover:border-blue-400"
+            outline-none hover:border-green-400"
             />
           </div>
 
@@ -29,10 +30,11 @@ export const Login = () => {
               placeholder="Password"
               className=" w-full py-2 rounded-md
             border 
+            bg-transparent
             p-2
-            outline-none hover:border-blue-400 "
+            outline-none hover:border-green-400 "
             />
-            <FaEyeSlash className="absolute top-0 left-[320px] text-left mt-4 text-black" />
+            <FaEyeSlash className="absolute top-0 left-[320px] text-left mt-4 text-white" />
           </div>
 
           <button className="w-full bg-blue-600  rounded-lg py-2 mt-10 mb-2 text-md text-white font-bold">

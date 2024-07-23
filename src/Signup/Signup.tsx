@@ -18,8 +18,9 @@ export const Signup = () => {
               placeholder="First Name"
               className=" w-full py-2 rounded-md
                 border 
+                bg-transparent
                 p-2
-                outline-none hover:border-blue-400"
+                outline-none hover:border-green-400"
             />
           </div>
           <div className="mb-4">
@@ -27,9 +28,10 @@ export const Signup = () => {
               type="text"
               placeholder="Last Name"
               className=" w-full py-2 rounded-md
-                border 
+                border
+                bg-transparent 
                 p-2
-                outline-none hover:border-blue-400"
+                outline-none hover:border-green-400"
             />
           </div>
           <div className="mb-4">
@@ -38,8 +40,9 @@ export const Signup = () => {
               placeholder="Email"
               className=" w-full py-2 rounded-md
                 border 
+                bg-transparent
                 p-2
-                outline-none hover:border-blue-400"
+                outline-none hover:border-green-400"
             />
           </div>
           <div className="mb-4">
@@ -48,8 +51,9 @@ export const Signup = () => {
               placeholder="UserName"
               className=" w-full py-2 rounded-md
                 border 
+                bg-transparent
                 p-2
-                outline-none hover:border-blue-400"
+                outline-none hover:border-green-400"
             />
           </div>
           <div className="mb-4">
@@ -59,7 +63,8 @@ export const Signup = () => {
               className=" w-full py-2 rounded-md
                 border 
                 p-2
-                outline-none hover:border-blue-400"
+                bg-transparent
+                outline-none hover:border-green-400"
             />
           </div>
           <div className="mb-4">
@@ -68,8 +73,9 @@ export const Signup = () => {
               type="text"
               className="w-full py-2 rounded-md
                 border 
+                bg-transparent
                 p-2
-                outline-none hover:border-blue-500"
+                outline-none hover:border-green-500"
             />
           </div>
           <div className="mb-4">
@@ -78,8 +84,9 @@ export const Signup = () => {
               placeholder="Password"
               className=" w-full py-2 rounded-md
                 border 
+                bg-transparent
                 p-2
-                outline-none hover:border-blue-400"
+                outline-none hover:border-green-400"
             />
           </div>
           <div className="flex justify-center items-center gap-4 px-2 mb-2">
