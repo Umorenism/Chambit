@@ -1,10 +1,4 @@
-import {
-  FaBaseball,
-  FaGlassWater,
-  FaMarker,
-  FaMessage,
-  FaScrewdriverWrench,
-} from "react-icons/fa6";
+import { FaBaseball, FaGlassWater, FaMarker, FaMessage } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const footerItmems = [
