@@ -32,7 +32,7 @@ export const Swap = () => {
         {carditem.map((item, index) => (
           <div
             key={index}
-            className=" w-1/2 py-4 justify-center flex flex-col items-center bg-gray-600 rounded-lg shadow-lg text-white hover:bg-blue-600 transition-all ease-in duration-300"
+            className=" w-1/2 py-4 justify-center flex flex-col items-center bg-gray-600 rounded-lg shadow-lg text-white hover:bg-blue-600 transition-all ease-in duration-300 gap-3"
           >
             <Link to={item.path}>
               <div>{item.icon}</div>

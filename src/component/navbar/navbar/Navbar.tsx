@@ -11,7 +11,7 @@ export const Navbar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="bg-gray-950 text-white shadow-lg fixed top-0 z-10 left-0 w-full h-[60px]">
+    <div className="bg-gray-950 text-white shadow-lg fixed top-0 z-10 left-0 w-full h-[80px]">
       <div className="flex justify-between items-center mb-4 p-4">
         <div className="relative ">
           <div>
