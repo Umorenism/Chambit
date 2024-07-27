@@ -56,11 +56,6 @@ export const GainItem: React.FC = () => {
           {/* Spot Trading Down */}
 
           <div>
-            <div className="flex justify-between items-center px-4 mt-2">
-              <h1>Trading pairs</h1>
-              <p>Price</p>
-              <h5>24H Change</h5>
-            </div>
             <div className="flex justify-around pb-2 items-center w-full">
               <h4 className="flex flex-col mt-5 text-xl">
                 <div>BNB/USDT</div>

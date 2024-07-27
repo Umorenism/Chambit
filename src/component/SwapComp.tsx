@@ -60,7 +60,7 @@ export const SwapComp = () => {
                 <span className=" text-orange-500">0</span>
               </p>
             </div>
-            <div className="flex justify-between p-2 text-lg">
+            <div className="flex  justify-between p-2 text-lg">
               <p className="flex justify-center items-center text-xl font-bold">
                 BNB <FaAngleRight onClick={toggleShown} />
               </p>
@@ -155,14 +155,14 @@ export const SwapComp = () => {
           </button>
           <div className="text-white mt-3 py-4 h-auto px-4">
             <div className="flex justify-between gap-14">
-              <div className="w-1/2 py-6 p-4">
+              <div className="w-1/2 py-6 p-2 items-start flex">
                 <ul>
                   <li>Provider</li>
                   <li>Provider fee</li>
                   <li>Slippage tolerance</li>
                 </ul>
               </div>
-              <div className="w-1/2 py-6 p-4">
+              <div className="w-1/2 py-6 p-2 i items-end flex">
                 <ul>
                   <li>0x</li>
                   <li>47356 DONS (=$3.59)</li>

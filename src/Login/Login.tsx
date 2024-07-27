@@ -58,7 +58,7 @@ export const Login = () => {
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full py-2 rounded-md border bg-transparent p-2 outline-none hover:border-green-400"
+              className="w-full py-2 rounded-md border bg-transparent p-2 outline-none hover:border-green-400 bg-none`"
             />
             <div
               className="absolute top-0 right-3 flex items-center h-full cursor-pointer"
