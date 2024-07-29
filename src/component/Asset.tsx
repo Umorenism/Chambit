@@ -1,9 +1,4 @@
-import {
-  FaCertificate,
-  FaEye,
-  FaTradeFederation,
-  FaWallet,
-} from "react-icons/fa6";
+import { FaEye, FaTradeFederation, FaWallet } from "react-icons/fa6";
 
 export const Asset = () => {
   return (
