@@ -58,7 +58,7 @@ export const Chart = () => {
               <div className="bg-gray-500 rounded-md mt-3">
                 <div className="flex justify-between p-2">
                   <h1>{value.toFixed(5)}</h1>
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 text-xl">
                     <button onClick={handleDecrement}>-</button>
                     <button onClick={handleIncrement}>+</button>
                   </div>
@@ -102,7 +102,7 @@ export const Chart = () => {
                   <p>GTC</p>
                 </div>
               </div>
-              <div className="mt-10">
+              <div className="mt-8">
                 <button className="bg-green-500 w-full py-4 rounded-md text-white text-lg">
                   Buy RPK
                 </button>
@@ -112,11 +112,11 @@ export const Chart = () => {
 
           <div className="w-1/2 py-4 p-2">
             <div className="flex justify-between">
-              <h1 className="bg-green-500 w-1/2 py-2 text-start p-2">
+              <h1 className=" w-1/2 py-2 text-start p-2">
                 Price
                 <div>(USDT0)</div>
               </h1>
-              <p className="bg-red-600 w-1/2 py-2 text-end p-2">
+              <p className="w-1/2 py-2 text-end p-2">
                 QTY
                 <div>(USDT0)</div>
               </p>
