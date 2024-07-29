@@ -12,6 +12,7 @@ import { SwapComp } from "./component/SwapComp.tsx";
 import { PtoP } from "./component/PtoP.tsx";
 import { OrderBook } from "./component/OrderBook.tsx";
 import { Chart } from "./component/Chart.tsx";
+import { Spot } from "./component/Spot.tsx";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "/pp",
         element: <PtoP />,
+      },
+      {
+        path: "/spot",
+        element: <Spot />,
       },
       {
         path: "/orderbook",

@@ -8,18 +8,18 @@ const footerItmems = [
     path: "/",
   },
   {
-    title: "P2P",
+    title: "Market",
     icons: <FaMarker />,
     path: "/pp",
   },
 
   {
-    title: "Sport",
+    title: "Trade",
     icons: <FaBaseball />,
-    path: "/sport",
+    path: "/spot",
   },
   {
-    title: "Assets",
+    title: "Wallet",
     icons: <FaGlassWater />,
     path: "/asset",
   },
