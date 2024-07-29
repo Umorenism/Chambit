@@ -11,6 +11,7 @@ import { Asset } from "./component/Asset.tsx";
 import { SwapComp } from "./component/SwapComp.tsx";
 import { PtoP } from "./component/PtoP.tsx";
 import { OrderBook } from "./component/OrderBook.tsx";
+import { Chart } from "./component/Chart.tsx";
 
 const router = createBrowserRouter([
   {
@@ -51,10 +52,10 @@ const router = createBrowserRouter([
         path: "/orderbook",
         element: <OrderBook />,
       },
-      // {
-      //   path: "/spot",
-      //   element: <Spot />,
-      // },
+      {
+        path: "/chart",
+        element: <Chart />,
+      },
     ],
   },
 ]);

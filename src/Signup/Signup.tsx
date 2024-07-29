@@ -43,8 +43,8 @@ export const Signup = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-950 text-white p-4 overflow-y-auto">
-      <div className="w-full max-w-sm h-screen mt-20">
+    <div className="flex justify-center items-center min-h-screen bg-gray-950 text-white p-4 overflow-y-auto xpy-14">
+      <div className="w-full max-w-sm min-h-screen mt-20">
         <div className="flex justify-center mb-6 items-start">
           <img src={logo} alt="Logo" className="h-[50px]" />
         </div>
@@ -144,9 +144,9 @@ export const Signup = () => {
           >
             {loading ? "Creating Account..." : "Create Account"}
           </button>
-          <p className="py-2 text-center">
+          <p className="py-2 text-center  mb-20">
             Already have an account?{" "}
-            <a href="/login" className="text-orange-500">
+            <a href="/login" className="text-orange-500 cursor-pointer">
               Login here
             </a>
           </p>
