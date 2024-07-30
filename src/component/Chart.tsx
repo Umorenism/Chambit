@@ -13,12 +13,20 @@ export const Chart = () => {
     setValue((prevValue) => (prevValue > 0 ? prevValue - 0.00001 : 0));
   };
 
+  const handleCancelAll = () => {
+    setValue(0.00823);
+  };
+
   return (
     <div className="flex justify-center items-center bg-gray-950 text-white p-4 overflow-y-auto">
       <div className="w-full max-w-sm min-h-screen h-auto mt-20">
         <div className="flex justify-between">
-          <button className="bg-gray-500 w-1/2 py-2">Chart</button>
-          <button className="bg-gray-800 w-1/2 py-2">Trade</button>
+          <button className="bg-gray-500 w-1/2 py-2 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300 transition">
+            Chart
+          </button>
+          <button className="bg-gray-800 w-1/2 py-2 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-600 transition">
+            Trade
+          </button>
         </div>
 
         <div className="flex justify-between mt-6 py-4">
@@ -42,8 +50,12 @@ export const Chart = () => {
         <div className="flex justify-between mt-5 gap-2">
           <div className="w-1/2 py-4 p-2">
             <div className="flex justify-between">
-              <button className="bg-green-500 w-1/2 py-2">BUY</button>
-              <button className="bg-red-600 w-1/2 py-2">SELL</button>
+              <button className="bg-green-500 w-1/2 py-2 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 transition">
+                BUY
+              </button>
+              <button className="bg-red-600 w-1/2 py-2 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 transition">
+                SELL
+              </button>
             </div>
 
             <div className="text-white mt-3">
@@ -60,8 +72,18 @@ export const Chart = () => {
                 <div className="flex justify-between p-2">
                   <h1>{value.toFixed(5)}</h1>
                   <div className="flex gap-2 text-xl">
-                    <button onClick={handleDecrement}>-</button>
-                    <button onClick={handleIncrement}>+</button>
+                    <button
+                      onClick={handleDecrement}
+                      className="hover:text-red-400 transition"
+                    >
+                      -
+                    </button>
+                    <button
+                      onClick={handleIncrement}
+                      className="hover:text-green-400 transition"
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
               </div>
@@ -98,7 +120,7 @@ export const Chart = () => {
                 </div>
               </div>
               <div className="mt-8">
-                <button className="bg-green-500 w-full py-4 rounded-md text-white text-lg">
+                <button className="bg-green-500 w-full py-4 rounded-md text-white text-lg hover:bg-green-600 transition">
                   Buy RPK
                 </button>
               </div>
@@ -155,16 +177,18 @@ export const Chart = () => {
                   <p>2.345k</p>
                 </div>
                 <div className="flex justify-between gap-2">
-                  <button className="w-[40%] bg-green-300 p-2">
+                  <button className="w-[40%] bg-green-300 p-2 hover:bg-green-400 transition">
                     <span className="h-3 w-3 border px-2 bg-green-300">B</span>
                     11%
                   </button>
-                  <button className="w-[60%] bg-red-400 p-2">
+                  <button className="w-[60%] bg-red-400 p-2 hover:bg-red-500 transition">
                     89% <span className="h-3 w-3 border px-2">$</span>
                   </button>
                 </div>
                 <div className="flex justify-between mt-2">
-                  <button className="bg-gray-500 px-10">0.00001</button>
+                  <button className="bg-gray-500 px-10 hover:bg-gray-600 transition">
+                    0.00001
+                  </button>
                   <div className="h-5 w-5 rounded-md border"></div>
                 </div>
               </div>
@@ -193,7 +217,12 @@ export const Chart = () => {
               All Markets <span className="ml-2">All Types</span>
               <FaArrowDown91 className="ml-3" />
             </div>
-            <button>Cancel All</button>
+            <button
+              onClick={handleCancelAll}
+              className="hover:text-red-400 transition"
+            >
+              Cancel All
+            </button>
           </div>
           <hr className="w-full h-1 bg-slate-100 mt-4" />
         </div>
@@ -201,7 +230,7 @@ export const Chart = () => {
           <div className="flex justify-between items-center p-4">
             <h1 className="flex gap-2">
               AVAIL/USDT{" "}
-              <span className="px-4 rounded-md bg-red-400 flex justify-center items-center">
+              <span className="px-4 rounded-md bg-red-400 flex justify-center items-center hover:bg-red-500 transition">
                 sell
               </span>
             </h1>
@@ -210,7 +239,7 @@ export const Chart = () => {
           <div className="flex justify-between items-center p-4">
             <h1 className="flex gap-2">
               AVAIL/USDT{" "}
-              <span className="px-4 rounded-md bg-red-400 flex justify-center items-center">
+              <span className="px-4 rounded-md bg-red-400 flex justify-center items-center hover:bg-red-500 transition">
                 sell
               </span>
             </h1>
@@ -219,7 +248,7 @@ export const Chart = () => {
           <div className="flex justify-between items-center p-4">
             <h1 className="flex gap-2">
               AVAIL/USDT{" "}
-              <span className="px-4 rounded-md bg-red-400 flex justify-center items-center">
+              <span className="px-4 rounded-md bg-red-400 flex justify-center items-center hover:bg-red-500 transition">
                 sell
               </span>
             </h1>
