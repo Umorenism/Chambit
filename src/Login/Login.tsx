@@ -2,14 +2,15 @@ import { useState } from "react";
 import { FaEyeSlash, FaEye } from "react-icons/fa6";
 import axios from "axios";
 import logo from "../asset/chambit.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null); // Explicitly type the state
+  const [error, setError] = useState<string | null>(null);
+  const navigate = useNavigate(); // Use useNavigate for programmatic navigation
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,7 +23,11 @@ export const Login = () => {
         password,
       });
       console.log("Login successful:", response.data);
-      // Handle successful login (e.g., store tokens, redirect)
+      // Handle successful login (e.g., store tokens)
+      // Simulate loading effect
+      setTimeout(() => {
+        navigate("/home");
+      }, 2000); // Adjust the timeout duration as needed
     } catch (err) {
       console.error("Login failed:", err);
       setError("Login failed. Please check your credentials and try again.");
@@ -59,7 +64,7 @@ export const Login = () => {
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full py-2 rounded-md border bg-transparent p-2 outline-none hover:border-green-400 bg-none`"
+              className="w-full py-2 rounded-md border bg-transparent p-2 outline-none hover:border-green-400"
             />
             <div
               className="absolute top-0 right-3 flex items-center h-full cursor-pointer"
@@ -75,20 +80,18 @@ export const Login = () => {
           {error && (
             <p className="text-red-500 text-sm text-center mb-4">{error}</p>
           )}
-          <Link to="/home">
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full bg-blue-600 rounded-lg py-2 mt-10 mb-2 text-md text-white font-bold"
-            >
-              {loading ? "Logging in..." : "Login"}
-            </button>
-          </Link>
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full bg-blue-600 rounded-lg py-2 mt-10 mb-2 text-md text-white font-bold"
+          >
+            {loading ? "Logging in..." : "Login"}
+          </button>
           <p className="py-2 text-center">
             Don't have an account?{" "}
-            <a href="/signup" className="text-orange-500">
+            <Link to="/signup" className="text-orange-500">
               Sign up here
-            </a>
+            </Link>
           </p>
         </form>
       </div>
