@@ -1,5 +1,6 @@
 import { FaArrowDown91, FaBatteryEmpty, FaCircle } from "react-icons/fa6";
 import { useState } from "react";
+import { Long } from "./Long";
 
 export const Chart = () => {
   const [value, setValue] = useState(0.00823);
@@ -50,12 +51,12 @@ export const Chart = () => {
                 <h1>Available</h1>
                 <p>0.0052USDT</p>
               </div>
-              <div className="bg-gray-700 rounded-md py-2 flex justify-between p-2">
+              <div className="bg-gray-800 rounded-md py-2 flex justify-between p-2">
                 <h1>Limit</h1>
                 <p>v</p>
               </div>
 
-              <div className="bg-gray-500 rounded-md mt-3">
+              <div className="bg-gray-800 rounded-md mt-3">
                 <div className="flex justify-between p-2">
                   <h1>{value.toFixed(5)}</h1>
                   <div className="flex gap-2 text-xl">
@@ -66,30 +67,24 @@ export const Chart = () => {
               </div>
 
               <p className="py-2">= {value.toFixed(5)} USD</p>
-              <div className="bg-gray-500 rounded-md mt-3">
+              <div className="bg-gray-800 rounded-md mt-3">
                 <div className="flex justify-between p-2">
                   <h1>QTY</h1>
                   <p>RPK</p>
                 </div>
               </div>
 
-              <div className="flex items-center mt-2">
-                <h1 className="h-4 rounded-full bg-orange-500 w-4 mt-4"></h1>
-                <p className="h-1 w-12 bg-slate-500 mt-4"></p>
-                <h1 className="h-4 rounded-full bg-gray-300 w-4 mt-4"></h1>
-                <p className="h-1 w-12 bg-slate-500 mt-4"></p>
-                <h1 className="h-4 rounded-full bg-gray-300 w-4 mt-4"></h1>
-                <p className="h-1 w-10 bg-slate-500 mt-4"></p>
-                <h1 className="h-4 rounded-full bg-gray-300 w-4 mt-4"></h1>
+              <div>
+                <Long />
               </div>
-              <div className="bg-slate-500 rounded-md mt-3">
+              <div className="bg-slate-800 rounded-md mt-3">
                 <div className="flex justify-between p-2">
                   <h1>Order value</h1>
                   <p>USDT</p>
                 </div>
               </div>
 
-              <div className="bg-gray-500 rounded-md mt-3 text-center">
+              <div className="bg-gray-800 rounded-md mt-3 text-center">
                 <h1>TP/SL</h1>
               </div>
 
@@ -160,12 +155,12 @@ export const Chart = () => {
                   <p>2.345k</p>
                 </div>
                 <div className="flex justify-between gap-2">
-                  <button className="w-[40%] bg-green-300">
-                    <span className="h-4 w-4 border px-2 bg-green-300">B</span>
+                  <button className="w-[40%] bg-green-300 p-2">
+                    <span className="h-3 w-3 border px-2 bg-green-300">B</span>
                     11%
                   </button>
-                  <button className="w-[60%] bg-red-400">
-                    89% <span className="h-4 w-4 border px-2">$</span>
+                  <button className="w-[60%] bg-red-400 p-2">
+                    89% <span className="h-3 w-3 border px-2">$</span>
                   </button>
                 </div>
                 <div className="flex justify-between mt-2">

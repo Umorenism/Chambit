@@ -28,10 +28,10 @@ export const Asset = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-950 text-white p-4 overflow-y-auto">
       <div className="w-full max-w-sm min-h-screen mt-20">
-        <div className="py-4 bg-black rounded-lg flex justify-between items-center p-4 text-lg w-full">
+        <div className="py-4 bg-gray-800 rounded-lg flex justify-between items-center p-4 text-lg w-full">
           <div>
             <div>
-              <h2 className="flex items-center gap-2">
+              <h2 className="flex items-center gap-2 text-2xl">
                 Total Equity
                 <FaEye onClick={() => toggleVisibility("totalEquity")} />
               </h2>
@@ -41,38 +41,38 @@ export const Asset = () => {
                     45.21 <span>USD</span>
                   </h1>
                   <p>=--BTC</p>
-                  <p>
-                    Todays P&L -2.41 <span>USD</span>
-                  </p>
                 </>
               ) : (
                 <h1>******</h1>
               )}
+              <p>
+                Todays P&L -2.41 <span>USD</span>
+              </p>
             </div>
           </div>
           <div className="mb-16 text-sm text-green-700">0.00%</div>
         </div>
         {/* second card */}
-        <div className="py-4 bg-black rounded-lg flex justify-between items-center p-2 text-lg w-full mt-2">
+        <div className="py-4 bg-gray-800 rounded-lg flex justify-between items-center p-2 text-lg w-full mt-2">
           <p>Wallet balance</p>
           <FaWallet onClick={() => toggleVisibility("walletBalance")} />
           {isVisible.walletBalance ? <p>0.00 USD</p> : <p>******</p>}
         </div>
         {/* third card */}
         <div className="py-4 rounded-lg flex justify-between items-center p-2 text-lg w-full mt-2 gap-4">
-          <div className="w-full py-4 flex justify-center bg-black flex-col items-center rounded-md">
+          <div className="w-full py-4 flex justify-center bg-gray-800 flex-col items-center rounded-md">
             <FaTradeFederation />
             <p className="p-1 text-sm">Deposit</p>
           </div>
-          <div className="w-full py-4 flex justify-center bg-black flex-col items-center rounded-md">
+          <div className="w-full py-4 flex justify-center bg-gray-800 flex-col items-center rounded-md">
             <FaTradeFederation />
             <p className="p-1 text-sm">Withdraw</p>
           </div>
-          <div className="w-full py-4 flex justify-center bg-black flex-col items-center rounded-md">
+          <div className="w-full py-4 flex justify-center bg-gray-800 flex-col items-center rounded-md">
             <FaTradeFederation />
             <p className="p-1 text-sm">Swap</p>
           </div>
-          <div className="w-full py-4 flex justify-center bg-black flex-col items-center rounded-md">
+          <div className="w-full py-4 flex justify-center bg-gray-800 flex-col items-center rounded-md">
             <FaTradeFederation />
             <p className="p-1 text-sm">Stack</p>
           </div>
@@ -85,7 +85,7 @@ export const Asset = () => {
               <input type="checkbox" className="p-2" />
               <span>Hide zero balance customize collateral</span>
             </div>
-            <div className="bg-black min-h-screen p-4 py-4 rounded-md">
+            <div className="bg-gray-800 min-h-screen p-4 py-4 rounded-md">
               <div className="flex justify-between p-2">
                 <div className="text-xl flex items-center justify-center">
                   <div className="h-4 w-4 rounded-full bg-green-500 flex justify-center items-center mb-5 mr-1 text-sm">

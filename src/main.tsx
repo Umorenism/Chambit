@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom/client";
 import { App } from "./App.tsx";
 import "./index.css";
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home } from "./page/Home.tsx";
 import { Login } from "./Login/Login.tsx";
@@ -13,6 +14,7 @@ import { PtoP } from "./component/PtoP.tsx";
 import { OrderBook } from "./component/OrderBook.tsx";
 import { Chart } from "./component/Chart.tsx";
 import { Spot } from "./component/Spot.tsx";
+import { GetStarted } from "./component/GetStarted.tsx";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,10 @@ const router = createBrowserRouter([
       },
       {
         path: "/",
+        element: <GetStarted />,
+      },
+      {
+        path: "/home",
         element: <Home />,
       },
       {

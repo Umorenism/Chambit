@@ -5,12 +5,12 @@ const footerItmems = [
   {
     title: "Home",
     icons: <FaMessage />,
-    path: "/",
+    path: "/home",
   },
   {
     title: "Market",
     icons: <FaMarker />,
-    path: "/pp",
+    path: "/market",
   },
 
   {

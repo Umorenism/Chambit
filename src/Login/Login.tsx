@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaEyeSlash, FaEye } from "react-icons/fa6";
 import axios from "axios";
 import logo from "../asset/chambit.svg";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -74,13 +75,15 @@ export const Login = () => {
           {error && (
             <p className="text-red-500 text-sm text-center mb-4">{error}</p>
           )}
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full bg-blue-600 rounded-lg py-2 mt-10 mb-2 text-md text-white font-bold"
-          >
-            {loading ? "Logging in..." : "Login"}
-          </button>
+          <Link to="/home">
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-blue-600 rounded-lg py-2 mt-10 mb-2 text-md text-white font-bold"
+            >
+              {loading ? "Logging in..." : "Login"}
+            </button>
+          </Link>
           <p className="py-2 text-center">
             Don't have an account?{" "}
             <a href="/signup" className="text-orange-500">
