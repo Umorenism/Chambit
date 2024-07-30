@@ -163,7 +163,7 @@ export const Spot = () => {
           </div>
         </div>
 
-        <div className="bg-black mt-4 py-4 justify-between items-center">
+        <div className="bg-gray-950 mt-4 py-4 justify-between items-center">
           <div className="flex gap-4 items-center justify-between">
             <h1 className="text-xl p-2 ">
               Open Order(0) <span className="ml-4">Post</span>
