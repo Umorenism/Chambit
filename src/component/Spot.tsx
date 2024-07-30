@@ -6,10 +6,20 @@ import { useState } from "react";
 
 export const Spot = () => {
   const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = () => {
     setOpen(!open);
   };
+
+  const handleSell = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      // Add your logic here after the loading effect
+    }, 2000); // Adjust the timeout duration as needed
+  };
+
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-950 text-white p-4 overflow-y-auto">
       <div className="w-full max-w-sm min-h-screen mt-20 flex flex-col">
@@ -156,8 +166,12 @@ export const Spot = () => {
             </div>
 
             <div className="mt-2">
-              <button className="bg-red-500 w-full py-2 rounded-md text-white">
-                sell mx
+              <button
+                onClick={handleSell}
+                className="bg-red-500 w-full py-2 rounded-md text-white"
+                disabled={loading}
+              >
+                {loading ? "Selling..." : "Sell MX"}
               </button>
             </div>
           </div>
