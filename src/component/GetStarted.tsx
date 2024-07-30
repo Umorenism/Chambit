@@ -1,6 +1,18 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import pic from "../asset/chambit.svg";
+
 export const GetStarted = () => {
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    setLoading(true);
+    setTimeout(() => {
+      navigate("/login");
+    }, 2000); // Adjust the timeout duration as needed
+  };
+
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-950 text-white p-4 overflow-y-auto">
       <div className="flex flex-col w-full">
@@ -9,11 +21,15 @@ export const GetStarted = () => {
           Welcome to Chambit ..
         </h1>
         <div className="mt-4 ">
-          <Link to="/login">
-            <button className=" w-full bg-orange-500 py-2 rounded-md font-bold mt-4 text-xl hover:bg-blue-600">
-              Get started
-            </button>
-          </Link>
+          <button
+            onClick={handleGetStarted}
+            className={`w-full py-2 rounded-md font-bold mt-4 text-xl ${
+              loading ? "bg-gray-500" : "bg-orange-500 hover:bg-blue-600"
+            }`}
+            disabled={loading}
+          >
+            {loading ? "Loading..." : "Get started"}
+          </button>
         </div>
       </div>
     </div>
