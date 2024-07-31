@@ -7,6 +7,11 @@ import { useState } from "react";
 export const Spot = () => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
+
+  const HandleDerop = () => {
+    setDropdown(!dropdown);
+  };
 
   const handleSubmit = () => {
     setOpen(!open);
@@ -44,7 +49,7 @@ export const Spot = () => {
         </div>
         {/* trade side component */}
 
-        <div className="min-h-[500px] bg-black p-4  mt-5 text-black flex justify-between gap-2">
+        <div className="min-h-[500px] bg-black p-4 rounded-md  mt-5 text-black flex justify-between gap-2">
           <div className="w-1/2 bg-black text-white">
             <div>
               <div className="flex justify-between p-2">
@@ -58,15 +63,35 @@ export const Spot = () => {
                 </div>
               </div>
               <div className="mt-4">
-                <div className="flex justify-between p-2">
+                <div className="flex justify-between ">
                   <h1 className="text-red-500">4.0298</h1>
                   <p>118.15</p>
                 </div>
-                <div className="flex justify-between p-2">
+                <div className="flex justify-between ">
                   <h1 className="text-red-500">4.0298</h1>
                   <p>118.15</p>
                 </div>
-                <div className="flex justify-between p-2">
+                <div className="flex justify-between ">
+                  <h1 className="text-red-500">4.0298</h1>
+                  <p>118.15</p>
+                </div>
+                <div className="flex justify-between ">
+                  <h1 className="text-red-500">4.0298</h1>
+                  <p>118.15</p>
+                </div>
+                <div className="flex justify-between ">
+                  <h1 className="text-red-500">4.0298</h1>
+                  <p>118.15</p>
+                </div>
+                <div className="flex justify-between ">
+                  <h1 className="text-red-500">4.0298</h1>
+                  <p>118.15</p>
+                </div>
+                <div className="flex justify-between ">
+                  <h1 className="text-red-500">4.0298</h1>
+                  <p>118.15</p>
+                </div>
+                <div className="flex justify-between ">
                   <h1 className="text-red-500">4.0298</h1>
                   <p>118.15</p>
                 </div>
@@ -79,23 +104,27 @@ export const Spot = () => {
             </div>
 
             <div className="bg-black">
-              <div className="flex justify-between p-2">
+              <div className="flex justify-between ">
                 <h1 className="text-green-500">4.0298</h1>
                 <p>118.15</p>
               </div>
-              <div className="flex justify-between p-2">
+              <div className="flex justify-between ">
                 <h1 className="text-green-500">4.0298</h1>
                 <p>118.15</p>
               </div>
-              <div className="flex justify-between p-2">
+              <div className="flex justify-between ">
                 <h1 className="text-green-500">4.0298</h1>
                 <p>118.15</p>
               </div>
-              <div className="flex justify-between p-2">
+              <div className="flex justify-between ">
                 <h1 className="text-green-500">4.0298</h1>
                 <p>118.15</p>
               </div>
-              <div className="flex justify-between p-2">
+              <div className="flex justify-between">
+                <h1 className="text-green-500">4.0298</h1>
+                <p>118.15</p>
+              </div>
+              <div className="flex justify-between">
                 <h1 className="text-green-500">4.0298</h1>
                 <p>118.15</p>
               </div>
@@ -114,17 +143,30 @@ export const Spot = () => {
 
           <div className="w-1/2 ">
             <div className="flex">
-              <button className="bg-gray-800 w-1/2 py-2 rounded-md">Buy</button>
+              <button className="bg-gray-400 w-1/2 py-2 rounded-md">Buy</button>
               <button className="bg-red-500 w-1/2 py-2 rounded-md">Sell</button>
             </div>
 
             <div className="bg-gray-800 mt-6 py-2 rounded-md">
-              <div className="flex justify-between items-center px-2 text-white">
+              <div
+                className="flex justify-between items-center px-2 text-white"
+                onClick={HandleDerop}
+              >
                 <p>1</p>
                 <h1>Limit</h1>
-                <FaArrowDown />
+
+                {dropdown ? (
+                  <FaArrowDown onClick={HandleDerop} />
+                ) : (
+                  <FaArrowUp onClick={HandleDerop} />
+                )}
               </div>
             </div>
+            {dropdown && (
+              <div className="absolute top-[340px] left-0 right-0 bg-white py-4 p-4 m-4 rounded-lg shadow-lg text-slate-500 z-20 min-h-screen p ">
+                gg
+              </div>
+            )}
             <div className="bg-gray-800 mt-4 py-2 rounded-md">
               <div className="flex justify-between items-center px-2 text-white">
                 <p>-</p>
@@ -165,7 +207,7 @@ export const Spot = () => {
               </div>
             </div>
 
-            <div className="mt-2">
+            <div className="mt-4">
               <button
                 onClick={handleSell}
                 className="bg-red-500 w-full py-2 rounded-md text-white"

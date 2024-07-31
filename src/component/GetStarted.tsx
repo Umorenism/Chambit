@@ -17,8 +17,8 @@ export const GetStarted = () => {
     <div className="flex justify-center items-center min-h-screen bg-gray-950 text-white p-4 overflow-y-auto">
       <div className="flex flex-col w-full">
         <img src={pic} alt="" className="h-[80px]" />
-        <h1 className="text-center text-3xl mt-5 animate-bounce">
-          Welcome to Chambit ..
+        <h1 className="text-center  mt-5 animate-bounce text-sm">
+          Welcome to Chambit
         </h1>
         <div className="mt-4 ">
           <button

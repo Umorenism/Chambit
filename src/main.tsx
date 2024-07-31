@@ -15,6 +15,8 @@ import { OrderBook } from "./component/OrderBook.tsx";
 import { Chart } from "./component/Chart.tsx";
 import { Spot } from "./component/Spot.tsx";
 import { GetStarted } from "./component/GetStarted.tsx";
+import { Navbar } from "./component/navbar/navbar/Navbar.tsx";
+import { Footer } from "./component/footer/Footer.tsx";
 
 const router = createBrowserRouter([
   {
@@ -23,49 +25,110 @@ const router = createBrowserRouter([
 
     children: [
       {
-        path: "/login",
-        element: <Login />,
-      },
-      {
-        path: "/signup",
-        element: <Signup />,
-      },
-      {
         path: "/",
         element: <GetStarted />,
       },
       {
+        path: "/login",
+        element: (
+          <>
+            <Navbar />
+            <Login />
+            <Footer />
+          </>
+        ),
+      },
+      {
+        path: "/signup",
+        element: (
+          <>
+            <Navbar />
+            <Signup />
+            <Footer />
+          </>
+        ),
+      },
+
+      {
         path: "/home",
-        element: <Home />,
+        element: (
+          <>
+            <Navbar />
+            <Home />
+            <Footer />
+          </>
+        ),
       },
       {
         path: "/market",
-        element: <Market />,
+        element: (
+          <>
+            <Navbar />
+            <Market />
+            <Footer />
+          </>
+        ),
       },
       {
         path: "/asset",
-        element: <Asset />,
+        element: (
+          <>
+            <Navbar />
+            <Asset />
+            <Footer />
+          </>
+        ),
       },
 
       {
         path: "/swap",
-        element: <SwapComp />,
+        element: (
+          <>
+            <Navbar />
+            <SwapComp />
+            <Footer />
+          </>
+        ),
       },
       {
         path: "/pp",
-        element: <PtoP />,
+        element: (
+          <>
+            <Navbar />
+            <PtoP />
+            <Footer />
+          </>
+        ),
       },
       {
         path: "/spot",
-        element: <Spot />,
+        element: (
+          <>
+            <Navbar />
+            <Spot />
+            <Footer />
+          </>
+        ),
       },
       {
         path: "/orderbook",
-        element: <OrderBook />,
+        element: (
+          <>
+            <Navbar />
+            <OrderBook />
+            <Footer />
+          </>
+        ),
       },
       {
         path: "/chart",
-        element: <Chart />,
+        element: (
+          <>
+            <Navbar />
+            <Chart />
+            <Footer />
+          </>
+        ),
       },
     ],
   },

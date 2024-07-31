@@ -9,26 +9,11 @@ import { CgSwap } from "react-icons/cg";
 import { useState } from "react";
 
 export const SwapComp = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isPop, setIsPop] = useState(false);
-  const [isShown, setIsShown] = useState(false);
-  const [isPlay, setIsPlay] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(null); // Track which dropdown is open
   const [isLoading, setIsLoading] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const togglePopdown = () => {
-    setIsPop(!isPop);
-  };
-
-  const toggleShown = () => {
-    setIsShown(!isShown);
-  };
-
-  const togglePlay = () => {
-    setIsPlay(!isPlay);
+  const toggleDropdown = (dropdown: any) => {
+    setDropdownOpen(dropdownOpen === dropdown ? null : dropdown); // Toggle dropdown
   };
 
   const handleContinue = () => {
@@ -51,7 +36,7 @@ export const SwapComp = () => {
               From BNB Smart Chain{" "}
               <RiArrowDropDownLine
                 size={30}
-                onClick={toggleDropdown}
+                onClick={() => toggleDropdown("from")}
                 className="cursor-pointer"
               />
             </div>
@@ -60,7 +45,7 @@ export const SwapComp = () => {
               <span className="text-orange-500">0</span>
             </div>
           </div>
-          {isOpen && (
+          {dropdownOpen === "from" && (
             <div className="absolute top-16 left-0 right-0 bg-white py-4 p-4 rounded-lg shadow-lg text-slate-500 z-20">
               <div className="flex flex-col gap-2">
                 <div className="bg-slate-200 p-2 rounded-lg flex justify-between">
@@ -77,9 +62,12 @@ export const SwapComp = () => {
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center text-xl font-bold">
               BNB{" "}
-              <FaAngleRight onClick={toggleShown} className="cursor-pointer" />
+              <FaAngleRight
+                onClick={() => toggleDropdown("fromDetails")}
+                className="cursor-pointer"
+              />
             </div>
-            {isShown && (
+            {dropdownOpen === "fromDetails" && (
               <div className="absolute top-16 left-0 right-0 bg-white py-4 p-4 rounded-lg shadow-lg text-slate-500 z-20">
                 <div className="flex flex-col gap-2">
                   <div className="bg-slate-200 p-2 rounded-lg flex justify-between">
@@ -108,7 +96,7 @@ export const SwapComp = () => {
               To BNB Smart Chain{" "}
               <RiArrowDropDownLine
                 size={30}
-                onClick={togglePlay}
+                onClick={() => toggleDropdown("to")}
                 className="cursor-pointer"
               />
             </div>
@@ -117,7 +105,7 @@ export const SwapComp = () => {
               <span className="text-orange-500">0</span>
             </div>
           </div>
-          {isPlay && (
+          {dropdownOpen === "to" && (
             <div className="absolute top-16 left-0 right-0 bg-white py-4 p-4 rounded-lg shadow-lg text-slate-500 z-20">
               <div className="flex flex-col gap-2">
                 <div className="bg-slate-200 p-2 rounded-lg flex justify-between">
@@ -135,11 +123,11 @@ export const SwapComp = () => {
             <div className="flex items-center text-xl font-bold">
               BNB{" "}
               <FaAngleRight
-                onClick={togglePopdown}
+                onClick={() => toggleDropdown("toDetails")}
                 className="cursor-pointer"
               />
             </div>
-            {isPop && (
+            {dropdownOpen === "toDetails" && (
               <div className="absolute top-16 left-0 right-0 bg-white py-4 p-4 rounded-lg shadow-lg text-slate-500 z-20">
                 <div className="flex flex-col gap-2">
                   <div className="bg-slate-200 p-2 rounded-lg flex justify-between">
