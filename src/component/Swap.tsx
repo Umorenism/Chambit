@@ -1,6 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { RiSwapFill } from "react-icons/ri";
-import { GiTrade } from "react-icons/gi";
+
+import { FcInvite } from "react-icons/fc";
+import { GiWantedReward } from "react-icons/gi";
+import { CgMoreVertical } from "react-icons/cg";
 import { useState } from "react";
 import pic from "../asset/istockphoto-1323542329-612x612.jpg";
 
@@ -15,7 +18,7 @@ type LoadingState = {
 const carditem = [
   {
     icon: (
-      <RiSwapFill
+      <FcInvite
         size={30}
         className="border border-white rounded-full text-orange-500"
       />
@@ -48,7 +51,7 @@ const carditem = [
   },
   {
     icon: (
-      <GiTrade
+      <GiWantedReward
         size={30}
         className="border border-white rounded-full text-orange-500"
       />
@@ -59,7 +62,7 @@ const carditem = [
   },
   {
     icon: (
-      <GiTrade
+      <CgMoreVertical
         size={30}
         className="border border-white rounded-full text-orange-500"
       />

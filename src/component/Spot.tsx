@@ -8,6 +8,8 @@ export const Spot = () => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+  const [quantity, setQuantity] = useState(0);
+  const [price, setPrice] = useState(4.0255);
 
   const HandleDerop = () => {
     setDropdown(!dropdown);
@@ -23,6 +25,26 @@ export const Spot = () => {
       setLoading(false);
       // Add your logic here after the loading effect
     }, 2000); // Adjust the timeout duration as needed
+  };
+
+  const increaseQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const decreaseQuantity = () => {
+    if (quantity > 0) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+  const increasePrice = () => {
+    setPrice(price + 0.0001);
+  };
+
+  const decreasePrice = () => {
+    if (price > 0) {
+      setPrice(price - 0.0001);
+    }
   };
 
   return (
@@ -49,7 +71,7 @@ export const Spot = () => {
         </div>
         {/* trade side component */}
 
-        <div className="min-h-[500px] bg-black p-4 rounded-md  mt-5 text-black flex justify-between gap-2">
+        <div className="min-h-[500px] bg-black p-4 rounded-md mt-5 text-black flex justify-between gap-2">
           <div className="w-1/2 bg-black text-white">
             <div>
               <div className="flex justify-between p-2">
@@ -130,18 +152,21 @@ export const Spot = () => {
               </div>
 
               <div className="p-2 flex justify-between items-center gap-2">
-                <button className="bg-gray-600 px-6 p-2 flex items-center justify-between rounded-md">
+                <button
+                  onClick={decreasePrice}
+                  className="bg-gray-600 px-7 p-2 flex mt-2  mr-2 items-center justify-between rounded-md transition duration-200 ease-in-out transform hover:scale-105"
+                >
                   <p> 0.0001</p>
                   <div>
                     <FaArrowDown />
                   </div>
                 </button>
-                <div className="h-8 w-10 bg-slate-400 rounded-md"></div>
+                <div className="h-8 w-10 bg-slate-400 rounded-md mt-2"></div>
               </div>
             </div>
           </div>
 
-          <div className="w-1/2 ">
+          <div className="w-1/2">
             <div className="flex">
               <button className="bg-gray-400 w-1/2 py-2 rounded-md">Buy</button>
               <button className="bg-red-500 w-1/2 py-2 rounded-md">Sell</button>
@@ -163,23 +188,43 @@ export const Spot = () => {
               </div>
             </div>
             {dropdown && (
-              <div className="absolute top-[340px] left-0 right-0 bg-white py-4 p-4 m-4 rounded-lg shadow-lg text-slate-500 z-20 min-h-screen p ">
+              <div className="absolute top-[340px] left-0 right-0 bg-white py-4 p-4 m-4 rounded-lg shadow-lg text-slate-500 z-20 min-h-screen">
                 gg
               </div>
             )}
             <div className="bg-gray-800 mt-4 py-2 rounded-md">
               <div className="flex justify-between items-center px-2 text-white">
-                <p>-</p>
-                <h1>4.0255</h1>
-                <p>+</p>
+                <button
+                  onClick={decreasePrice}
+                  className="text-white px-2 py-1 rounded-md transition duration-200 ease-in-out transform hover:scale-105"
+                >
+                  -
+                </button>
+                <h1>{price.toFixed(4)}</h1>
+                <button
+                  onClick={increasePrice}
+                  className="text-white px-2 py-1 rounded-md transition duration-200 ease-in-out transform hover:scale-105"
+                >
+                  +
+                </button>
               </div>
             </div>
-            <p className="text-white py-2">$4.024</p>
+            <p className="text-white py-2">${price.toFixed(4)}</p>
             <div className="bg-gray-800 mt-4 py-2 rounded-md">
               <div className="flex justify-between items-center px-2 text-white">
-                <p>-</p>
-                <h1>QUANTITY(MX)</h1>
-                <p>+</p>
+                <button
+                  onClick={decreaseQuantity}
+                  className="text-white px-2 py-1 rounded-md transition duration-200 ease-in-out transform hover:scale-105"
+                >
+                  -
+                </button>
+                <h1>{quantity}</h1>
+                <button
+                  onClick={increaseQuantity}
+                  className="text-white px-2 py-1 rounded-md transition duration-200 ease-in-out transform hover:scale-105"
+                >
+                  +
+                </button>
               </div>
             </div>
             <div className="py-4">
@@ -210,7 +255,7 @@ export const Spot = () => {
             <div className="mt-4">
               <button
                 onClick={handleSell}
-                className="bg-red-500 w-full py-2 rounded-md text-white"
+                className="bg-red-500 w-full py-2 rounded-md text-white transition duration-200 ease-in-out transform hover:scale-105"
                 disabled={loading}
               >
                 {loading ? "Selling..." : "Sell MX"}
