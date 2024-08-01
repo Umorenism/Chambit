@@ -33,6 +33,7 @@ const router = createBrowserRouter([
         element: (
           <>
             <Login />
+            <Footer />
           </>
         ),
       },
@@ -41,6 +42,7 @@ const router = createBrowserRouter([
         element: (
           <>
             <Signup />
+            <Footer />
           </>
         ),
       },
