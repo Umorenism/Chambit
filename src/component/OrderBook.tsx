@@ -34,9 +34,11 @@ export const OrderBook = () => {
         const response = await axios.get(
           "https://api.binance.com/api/v3/depth?symbol=BTCUSDT&limit=10"
         );
+        console.log("Response data:", response.data); // Log the response data
         setOrderBookData(response.data);
         setLoading(false);
       } catch (err) {
+        console.error("Error fetching data:", err); // Log the error
         if (axios.isAxiosError(err)) {
           setError(err.message);
           if (err.response) {
