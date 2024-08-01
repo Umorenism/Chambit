@@ -99,7 +99,7 @@ export const OrderBook = () => {
       </div>
       {/* graph */}
       <div className="px-4 mt-4">
-        <div className="bg-white text-slate-500 py-16 flex justify-center">
+        <div className="bg-white rounded-md text-slate-500 py-16 flex justify-center">
           {loading ? (
             <p>Loading...</p>
           ) : error ? (
@@ -112,7 +112,7 @@ export const OrderBook = () => {
 
       {/* BUY */}
       <div className="px-4 mt-4">
-        <div className="bg-white text-slate-500 py-4 flex justify-between items-center p-4 gap-4">
+        <div className="bg-white rounded-md text-slate-500 py-4 flex justify-between items-center p-4 gap-4">
           <div className="w-1/2 bg-black text-white py-4 px-4">
             <h1 className="text-2xl font-bold text-green-500">BUY</h1>
             <div className="flex justify-between items-center">

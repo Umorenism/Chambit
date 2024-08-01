@@ -1,6 +1,7 @@
 import { FaArrowDown, FaArrowUp } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { Long } from "./Long";
+import { FcFinePrint } from "react-icons/fc";
 import { TradeComponent } from "./TradeComponent";
 import { useState } from "react";
 
@@ -161,7 +162,9 @@ export const Spot = () => {
                     <FaArrowDown />
                   </div>
                 </button>
-                <div className="h-8 w-10 bg-slate-400 rounded-md mt-2"></div>
+                <div className="h-8 w-10 bg-blue-500 rounded-md mt-2 flex justify-center items-center">
+                  <FcFinePrint size={25} className="text-white text-center" />
+                </div>
               </div>
             </div>
           </div>

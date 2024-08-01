@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.bg-img{
+    background: url('/src/asset/crypto.png.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
