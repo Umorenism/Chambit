@@ -42,12 +42,10 @@ export const Login = () => {
         <div className="flex justify-center mb-6">
           <img src={logo} alt="Logo" className="h-[50px] mt-10" />
         </div>
-        <h1 className="text-2xl mt-5 font-bold text-center">
+        <h1 className="text-2xl mt-5 font-bold text-center mb-4">
           Login to your Account
         </h1>
-        <p className="py-4 text-sm text-center">
-          Login to your account by entering your email and password
-        </p>
+
         <form onSubmit={handleLogin}>
           <div className="mb-4">
             <input

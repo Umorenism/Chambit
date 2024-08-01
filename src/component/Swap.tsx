@@ -2,10 +2,14 @@ import { useNavigate } from "react-router-dom";
 import { RiSwapFill } from "react-icons/ri";
 import { GiTrade } from "react-icons/gi";
 import { useState } from "react";
+import pic from "../asset/istockphoto-1323542329-612x612.jpg";
 
 type LoadingState = {
   swapLoading: boolean;
   p2pLoading: boolean;
+  more: boolean;
+  reward: boolean;
+  Invite: boolean;
 };
 
 const carditem = [
@@ -16,9 +20,31 @@ const carditem = [
         className="border border-white rounded-full text-orange-500"
       />
     ),
-    title: "SWAP",
+    title: "Invite Friend",
+    path: "/",
+    loadingKey: "Invite",
+  },
+  {
+    icon: (
+      <RiSwapFill
+        size={30}
+        className="border border-white rounded-full text-orange-500"
+      />
+    ),
+    title: "Swap",
     path: "/swap",
     loadingKey: "swapLoading",
+  },
+  {
+    icon: (
+      <RiSwapFill
+        size={30}
+        className="border border-white rounded-full text-orange-500"
+      />
+    ),
+    title: "P2P trading",
+    path: "/pp",
+    loadingKey: "p2pLoading",
   },
   {
     icon: (
@@ -27,9 +53,20 @@ const carditem = [
         className="border border-white rounded-full text-orange-500"
       />
     ),
-    title: "P2P",
-    path: "/pp",
-    loadingKey: "p2pLoading",
+    title: "Reward",
+    path: "/",
+    loadingKey: "reward",
+  },
+  {
+    icon: (
+      <GiTrade
+        size={30}
+        className="border border-white rounded-full text-orange-500"
+      />
+    ),
+    title: "More",
+    path: "/",
+    loadingKey: "more",
   },
 ];
 
@@ -37,6 +74,9 @@ export const Swap = () => {
   const [loading, setLoading] = useState<LoadingState>({
     swapLoading: false,
     p2pLoading: false,
+    more: false,
+    reward: false,
+    Invite: false,
   });
 
   const navigate = useNavigate();
@@ -50,12 +90,12 @@ export const Swap = () => {
   };
 
   return (
-    <div className="bg-gray-950 py-5 px-4 mt-3 text-white">
-      <div className="py-10 px-2 flex justify-around gap-2">
+    <div className="bg-gray-950 py-2 px-4 mt-3 text-white">
+      <div className="py-2 px-2  grid  grid-cols-4 m-4 gap-3">
         {carditem.map((item, index) => (
           <div
             key={index}
-            className="w-1/2 py-4 justify-center flex flex-col items-center bg-gray-800 rounded-lg shadow-lg text-white hover:bg-blue-600 transition-all ease-in duration-300 gap-3"
+            className="w-full py-2 justify-center p-3 flex flex-wrap items-centers rounded-lg shadow-lg text-white text-sm hover:bg-blue-600 transition-all ease-in duration-300 gap-4"
             onClick={() =>
               handleClick(item.loadingKey as keyof LoadingState, item.path)
             }
@@ -86,11 +126,15 @@ export const Swap = () => {
             ) : (
               <>
                 <div>{item.icon}</div>
-                <p className="text-xl">{item.title}</p>
+                <p className="text-sm">{item.title}</p>
               </>
             )}
           </div>
         ))}
+      </div>
+      <hr />
+      <div className="py-2 rounded-md mt-5">
+        <img src={pic} alt="" className=" w-full rounded-lg" />
       </div>
     </div>
   );

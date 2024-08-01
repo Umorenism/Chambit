@@ -51,9 +51,7 @@ export const Signup = () => {
         <h1 className="text-2xl mt-3 font-bold text-center">
           Create your Account
         </h1>
-        <p className="py-2 text-sm text-center">
-          Login to your account by entering your email and password
-        </p>
+
         <form className="mt-10" onSubmit={handleSubmit}>
           <div className="mb-4">
             <input
