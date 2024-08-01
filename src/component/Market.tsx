@@ -40,14 +40,14 @@ export const Market = () => {
         <div className="min-h-screen mt-4">
           <Button />
           <Button />
+          <GreenBtn />
+          <GreenBtn />
+          <Button />
+          <GreenBtn />
+          <GreenBtn />
+          <GreenBtn />
           <Button />
           <Button />
-          <Button />
-          <GreenBtn />
-          <GreenBtn />
-          <GreenBtn />
-          <GreenBtn />
-          <GreenBtn />
           <GreenBtn />
           <GreenBtn />
         </div>

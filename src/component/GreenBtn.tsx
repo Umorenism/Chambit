@@ -1,3 +1,23 @@
+import React, { ReactNode } from "react";
+
+interface GlobalButtonProps {
+  children: ReactNode;
+  bgColor: string;
+  title: string;
+}
+
+const GlobalButton: React.FC<GlobalButtonProps> = ({
+  children,
+  bgColor,
+  title,
+}) => {
+  return (
+    <button className={`px-4 py-2 rounded-md ${bgColor}`} title={title}>
+      {children}
+    </button>
+  );
+};
+
 export const GreenBtn = () => {
   return (
     <div className="flex justify-between items-center mt-4">
@@ -10,7 +30,9 @@ export const GreenBtn = () => {
         <p>0.18USD</p>
       </div>
       <div>
-        <button className="px-4 bg-green-500 py-2 rounded-md">+4.945</button>
+        <GlobalButton bgColor="bg-green-500" title="Increase Value">
+          +4.945
+        </GlobalButton>
       </div>
     </div>
   );
