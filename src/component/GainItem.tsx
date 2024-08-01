@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TradeComponent } from "./TradeComponent";
+
 import { Gainorder } from "./Gainorder";
 
 export const GainItem: React.FC = () => {
@@ -31,11 +31,12 @@ export const GainItem: React.FC = () => {
           ))}
         </div>
       </div>
-      {openIndex !== null && (
+      <div>
+        <Gainorder />
+      </div>
+      {/* {openIndex !== null && (
         <>
           <Gainorder />
-          <hr className="border-2" />
-          <TradeComponent />
         </>
       )}
       <style>
@@ -55,7 +56,7 @@ export const GainItem: React.FC = () => {
           }
         }
         `}
-      </style>
+      </style> */}
     </div>
   );
 };
