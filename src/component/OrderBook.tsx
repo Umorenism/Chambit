@@ -1,6 +1,27 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Line } from "react-chartjs-2";
 import { Link } from "react-router-dom";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 export const OrderBook = () => {
   const [orderBookData, setOrderBookData] = useState({ bids: [], asks: [] });
@@ -17,7 +38,6 @@ export const OrderBook = () => {
         setLoading(false);
       } catch (err) {
         if (axios.isAxiosError(err)) {
-          // Access the message and response from the error object
           setError(err.message);
           if (err.response) {
             console.error("Error response:", err.response);
@@ -31,6 +51,24 @@ export const OrderBook = () => {
 
     fetchOrderBookData();
   }, []);
+
+  const chartData = {
+    labels: orderBookData.bids.map((_, index) => `Point ${index + 1}`),
+    datasets: [
+      {
+        label: "Bids",
+        data: orderBookData.bids.map((bid) => bid[0]),
+        borderColor: "rgba(75, 192, 192, 1)",
+        backgroundColor: "rgba(75, 192, 192, 0.2)",
+      },
+      {
+        label: "Asks",
+        data: orderBookData.asks.map((ask) => ask[0]),
+        borderColor: "rgba(255, 99, 132, 1)",
+        backgroundColor: "rgba(255, 99, 132, 0.2)",
+      },
+    ],
+  };
 
   return (
     <div className="h-screen bg-slate-950 py-16 text-white">
@@ -65,22 +103,7 @@ export const OrderBook = () => {
           ) : error ? (
             <p>Error loading data: {error}</p>
           ) : (
-            <div>
-              <h3 className="text-xl">Bids</h3>
-              {orderBookData.bids.map((bid, index) => (
-                <div key={index} className="flex justify-between">
-                  <p>{bid[0]}</p>
-                  <p>{bid[1]}</p>
-                </div>
-              ))}
-              <h3 className="text-xl mt-4">Asks</h3>
-              {orderBookData.asks.map((ask, index) => (
-                <div key={index} className="flex justify-between">
-                  <p>{ask[0]}</p>
-                  <p>{ask[1]}</p>
-                </div>
-              ))}
-            </div>
+            <Line data={chartData} />
           )}
         </div>
       </div>
@@ -94,6 +117,14 @@ export const OrderBook = () => {
               <h1>QTY</h1>
               <h1>PRICE</h1>
             </div>
+            <div className="flex justify-between items-center mt-2">
+              <p>0.1</p>
+              <p>40000</p>
+            </div>
+            <div className="flex justify-between items-center mt-2">
+              <p>0.2</p>
+              <p>39950</p>
+            </div>
           </div>
           {/* SELL */}
           <div className="w-1/2 bg-slate-500 text-white py-4 px-2">
@@ -101,6 +132,14 @@ export const OrderBook = () => {
             <div className="flex justify-between items-center">
               <div>QTY</div>
               <h1>PRICE</h1>
+            </div>
+            <div className="flex justify-between items-center mt-2">
+              <p>0.1</p>
+              <p>40500</p>
+            </div>
+            <div className="flex justify-between items-center mt-2">
+              <p>0.2</p>
+              <p>40550</p>
             </div>
           </div>
         </div>
