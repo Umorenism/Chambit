@@ -94,7 +94,7 @@ export const Swap = () => {
 
   return (
     <div className="bg-gray-950 py-2 px-4 mt-3 text-white">
-      <div className="py-2 px-2  grid  grid-cols-3 m-4 gap-4 justify-between items-center">
+      <div className="px-2  grid  grid-cols-3 m-4 gap-4 justify-between items-center">
         {carditem.map((item, index) => (
           <div
             key={index}

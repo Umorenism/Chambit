@@ -9,16 +9,16 @@ export const TotalBal = () => {
   };
 
   return (
-    <div className="bg-gray-950 py-11 text-gray-100">
+    <div className="bg-gray-950 py-5 text-gray-100">
       <div className="max-w-sm overflow-y-auto bg-slate-950">
-        <div className="text-white px-4 ml-5 bg-transparent border rounded-lg py-1 mt-5 flex items-center gap-2">
+        <div className="text-white px-4 ml-5 bg-transparent border rounded-lg py-1 mt-6 flex items-center gap-2">
           <FaSearchengin size={20} />
           <input
             type=""
-            className="w-full h-full outline-none bg-transparent text-slate-200 font-bold text-xl mb-2"
+            className="w-full h-full outline-none bg-transparent text-slate-200 font-bold text-ssm mb-2"
           />
         </div>
-        <div className="py-14 rounded-lg flex justify-between items-center mt-4 p-5 text-lg w-full mb-2">
+        <div className="py-4 rounded-lg flex justify-between items-center mt-4 p-5 text-lg w-full mb-2">
           <div>
             <div>
               <h2 className="flex items-center gap-2 ">
