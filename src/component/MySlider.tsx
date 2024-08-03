@@ -16,11 +16,6 @@ export const MySlider = () => {
             </button>
           </p>
         </div>
-        {/* <div className="slider-item">
-          <h1 className="text-lg font-bold">Let trade with chambit</h1>
-          <p className="mt-3">experience the best trading platform.</p>
-        </div> */}
-        {/* Add more slider items as needed */}
       </div>
     </div>
   );
