@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import pic from "../asset/chambit.png.png";
+import pic from "../asset/chambit.png";
 
 export const GetStarted = () => {
   const [loading, setLoading] = useState(false);

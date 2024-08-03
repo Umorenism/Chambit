@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { FaRegEyeSlash, FaRegEye, FaSearchengin } from "react-icons/fa6";
+import { Swap } from "./Swap";
+import { MySlider } from "./MySlider";
+import { GainItem } from "./GainItem";
 
 export const TotalBal = () => {
   const [isHidden, setIsHidden] = useState(false);
@@ -39,6 +42,11 @@ export const TotalBal = () => {
             </button>
           </div>
         </div>
+      </div>
+      <div className="mt-4">
+        <Swap />
+        <MySlider />
+        <GainItem />
       </div>
     </div>
   );
