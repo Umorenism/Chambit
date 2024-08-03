@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
+import { RiUserAddLine } from "react-icons/ri";
 import { RiSwapFill } from "react-icons/ri";
 
-import { FcInvite } from "react-icons/fc";
 import { GiWantedReward } from "react-icons/gi";
-import { CgMoreVertical } from "react-icons/cg";
+
 import { useState } from "react";
 import pic from "../asset/istockphoto-1323542329-612x612.jpg";
+import { CgMoreO } from "react-icons/cg";
 
 type LoadingState = {
   swapLoading: boolean;
@@ -18,7 +19,7 @@ type LoadingState = {
 const carditem = [
   {
     icon: (
-      <FcInvite
+      <RiUserAddLine
         size={30}
         className="border border-white rounded-full text-orange-500"
       />
@@ -62,7 +63,7 @@ const carditem = [
   },
   {
     icon: (
-      <CgMoreVertical
+      <CgMoreO
         size={30}
         className="border border-white rounded-full text-orange-500"
       />

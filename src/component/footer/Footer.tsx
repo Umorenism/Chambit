@@ -1,15 +1,17 @@
-import { FaBaseball, FaGlassWater, FaMarker, FaMessage } from "react-icons/fa6";
+import { FaBaseball, FaGlassWater } from "react-icons/fa6";
+import { SiCoinmarketcap } from "react-icons/si";
+import { RiUserAddLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 const footerItmems = [
   {
     title: "Home",
-    icons: <FaMessage />,
+    icons: <RiUserAddLine />,
     path: "/home",
   },
   {
     title: "Market",
-    icons: <FaMarker />,
+    icons: <SiCoinmarketcap />,
     path: "/market",
   },
 

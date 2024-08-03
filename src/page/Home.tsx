@@ -1,5 +1,5 @@
 import { GainItem } from "../component/GainItem";
-import { Slider } from "../component/Slider";
+import { MySlider } from "../component/MySlider";
 import { Swap } from "../component/Swap";
 import { TotalBal } from "../component/TotalBal";
 
@@ -8,7 +8,7 @@ export const Home = () => {
     <div className="mt-10 flex-1 min-h-screen bg-black">
       <TotalBal />
       <Swap />
-      <Slider />
+      <MySlider />
       <GainItem />
     </div>
   );
