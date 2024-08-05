@@ -1,16 +1,20 @@
+// Login.tsx
 import { useState } from "react";
 import { FaEyeSlash, FaEye } from "react-icons/fa6";
 import axios from "axios";
 import logo from "../asset/chambit.svg";
 import { Link, useNavigate } from "react-router-dom";
 
-export const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-  const [loading, setLoading] = useState(false);
+import { useAuth } from "../context/AuthContext"; // Import the custom hook
+
+export const Login: React.FC = () => {
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [showPassword, setShowPassword] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
-  const navigate = useNavigate(); // Use useNavigate for programmatic navigation
+  const navigate = useNavigate();
+  const { login } = useAuth(); // Use the custom hook to access context
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,16 +22,21 @@ export const Login = () => {
     setError(null);
 
     try {
-      const response = await axios.post("https://your-api-endpoint.com/login", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://backend.chambit.exchange/api/auth/signin",
+        {
+          email,
+          password,
+        }
+      );
+
       console.log("Login successful:", response.data);
-      // Handle successful login (e.g., store tokens)
-      // Simulate loading effect
+      const token = response.data.token;
+      login(token); // Use the login function from AuthContext
+
       setTimeout(() => {
         navigate("/home");
-      }, 2000); // Adjust the timeout duration as needed
+      }, 2000);
     } catch (err) {
       console.error("Login failed:", err);
       setError("Login failed. Please check your credentials and try again.");

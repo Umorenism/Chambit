@@ -1,3 +1,4 @@
+// main.tsx
 import ReactDOM from "react-dom/client";
 import { App } from "./App.tsx";
 import "./index.css";
@@ -8,7 +9,6 @@ import { Login } from "./Login/Login.tsx";
 import { Signup } from "./Signup/Signup.tsx";
 import { Market } from "./component/Market.tsx";
 import { Asset } from "./component/Asset.tsx";
-
 import { SwapComp } from "./component/SwapComp.tsx";
 import { PtoP } from "./component/PtoP.tsx";
 import { OrderBook } from "./component/OrderBook.tsx";
@@ -17,6 +17,9 @@ import { Spot } from "./component/Spot.tsx";
 import { GetStarted } from "./component/GetStarted.tsx";
 import { Navbar } from "./component/navbar/navbar/Navbar.tsx";
 import { Footer } from "./component/footer/Footer.tsx";
+import { SubHeaderComp } from "./component/navbar/navbar/SubHeaderComp.tsx";
+import { AuthProvider } from "./context/AuthContext.tsx"; // Import the AuthProvider
+import { DepositeCrypto } from "./component/DepositeCrypto.tsx";
 
 const router = createBrowserRouter([
   {
@@ -30,12 +33,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: (
-          <>
-            <Login />
-            <Footer />
-          </>
-        ),
+        element: <Login />,
+      },
+      {
+        path: "/subHead",
+        element: <SubHeaderComp />,
       },
       {
         path: "/signup",
@@ -46,7 +48,6 @@ const router = createBrowserRouter([
           </>
         ),
       },
-
       {
         path: "/home",
         element: (
@@ -77,7 +78,6 @@ const router = createBrowserRouter([
           </>
         ),
       },
-
       {
         path: "/swap",
         element: (
@@ -119,6 +119,14 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "/depositcrypto",
+        element: (
+          <>
+            <DepositeCrypto />
+          </>
+        ),
+      },
+      {
         path: "/chart",
         element: (
           <>
@@ -133,5 +141,9 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <RouterProvider router={router} />
+  <AuthProvider>
+    {" "}
+    {/* Wrap the RouterProvider with AuthProvider */}
+    <RouterProvider router={router} />
+  </AuthProvider>
 );

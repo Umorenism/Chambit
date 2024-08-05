@@ -21,68 +21,68 @@ export const TradeComponent = () => {
           </div>
 
           <div className="flex justify-between items-center py-5">
-            <div>
+            <div className="text-sm">
               <h2> 1SOL/USDT</h2>
               <span>2.14M USDT</span>
             </div>
             <div className="flex gap-4">
               <h2>0.00134</h2>
               <Link to="/orderbook">
-                <button className="px-4 bg-green-600 text-white font-bold py-2 rounded-md">
+                <button className="px-2 bg-green-600 text-white font-bold py-2 rounded-md">
                   +184.33%
                 </button>
               </Link>
             </div>
           </div>
           <div className="flex justify-between items-center py-5">
-            <div>
+            <div className="text-sm">
               <h2> XETA/USDT</h2>
               <span>2.14M USDT</span>
             </div>
             <div className="flex gap-4">
               <h2>0.00134</h2>
               <Link to="/orderbook">
-                <button className="px-4 bg-green-600 text-white font-bold py-2 rounded-md">
+                <button className="px-2 bg-green-600 text-white font-bold py-2 rounded-md">
                   +184.33%
                 </button>
               </Link>
             </div>
           </div>
           <div className="flex justify-between items-center py-5">
-            <div>
+            <div className="text-sm">
               <h2> TOMI/USDT</h2>
               <span>2.14M USDT</span>
             </div>
             <div className="flex gap-4">
               <h2>0.00134</h2>
-              <button className="px-4 bg-green-600 text-white font-bold py-2 rounded-md">
+              <button className="px-2 bg-green-600 text-white font-bold py-2 rounded-md">
                 +184.33%
               </button>
             </div>
           </div>
           <div className="flex justify-between items-center py-5">
-            <div>
+            <div className="text-sm">
               <h2>AGLA/USDT</h2>
               <span>2.14M USDT</span>
             </div>
             <div className="flex gap-4">
               <h2>0.00134</h2>
               <Link to="/orderbook">
-                <button className="px-4 bg-red-600 text-white font-bold py-2 rounded-md">
+                <button className="px-2 bg-red-600 text-white font-bold py-2 rounded-md">
                   +184.33%
                 </button>
               </Link>
             </div>
           </div>
           <div className="flex justify-between items-center py-5">
-            <div>
+            <div className="text-sm">
               <h2> GNS/USDT</h2>
               <span>2.14M USDT</span>
             </div>
             <div className="flex gap-4">
               <h2>0.00134</h2>
               <Link to="/orderbook">
-                <button className="px-4 bg-green-600 text-white font-bold py-2 rounded-md">
+                <button className="px-2 bg-green-600 text-white font-bold py-2 rounded-md">
                   +184.33%
                 </button>
               </Link>
@@ -96,21 +96,21 @@ export const TradeComponent = () => {
             <div className="flex gap-4">
               <h2>0.00134</h2>
               <Link to="/orderbook">
-                <button className="px-4 bg-red-600 text-white font-bold py-2 rounded-md">
+                <button className="px-2 bg-red-600 text-white font-bold py-2 rounded-md">
                   +184.33%
                 </button>
               </Link>
             </div>
           </div>
           <div className="flex justify-between items-center py-5">
-            <div>
+            <div className="text-sm">
               <h2> 1SOL/USDT</h2>
               <span>2.14M USDT</span>
             </div>
             <div className="flex gap-4">
               <h2>0.00134</h2>
               <Link to="/orderbook">
-                <button className="px-4 bg-green-600 text-white font-bold py-2 rounded-md">
+                <button className="px-2 bg-green-600 text-white font-bold py-2 rounded-md">
                   +184.33%
                 </button>
               </Link>

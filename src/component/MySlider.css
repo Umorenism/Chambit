@@ -1,5 +1,5 @@
 /* MySlider.css */
-@keyframes slideLeft {
+ @keyframes slideLeft {
   0% {
     transform: translateX(100%);
   }
@@ -22,4 +22,6 @@
 .slider-item {
   flex: 0 0 100%;
   /* Adjust the width as needed */
-}
+ }  
+
+

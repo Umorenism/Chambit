@@ -26,11 +26,13 @@ export const Market = () => {
         <hr className="mt-2" />
 
         <div className="flex justify-between items-center mt-6 ">
-          <button className="bg-gray-400 px-2  text-white">All</button>
-          <button>New</button>
-          <button>Trending</button>
-          <button>0 Fees</button>
-          <button>Adventure Zone</button>
+          <button className="bg-gray-400 px-2  text-white text-sm gap-2">
+            All
+          </button>
+          <button className="text-sm">New</button>
+          <button className="text-sm">Trending</button>
+          <button className="text-sm">0 Fees</button>
+          <button className="text-sm">Adventure Zone</button>
         </div>
         <div className="flex justify-between items-center mt-4">
           <h1>Trading Pairs/Vol</h1>

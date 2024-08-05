@@ -83,9 +83,11 @@ export const Asset = () => {
             <h1>Crypto</h1>
             <div className="flex py-4 items-center gap-2">
               <input type="checkbox" className="p-2" />
-              <span>Hide zero balance customize collateral</span>
+              <span className="text-sm">
+                Hide zero balance customize collateral
+              </span>
             </div>
-            <div className="bg-gray-800 min-h-screen p-4 py-4 rounded-md">
+            <div className="bg-gray-800  p-4 py-14 rounded-md">
               <div className="flex justify-between p-2">
                 <div className="text-xl flex items-center justify-center">
                   <div className="h-4 w-4 rounded-full bg-green-500 flex justify-center items-center mb-5 mr-1 text-sm">
