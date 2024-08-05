@@ -1,6 +1,6 @@
 import { FaCircle } from "react-icons/fa6";
 import { MdOutlineCancel } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const textItems = [
   "ERC20",
@@ -47,9 +47,11 @@ export const DepositDetailPage = () => {
           </div>
           <div className="p-2 mt-4">
             {textItems.map((item, index) => (
-              <p key={index} className="text-sm font-semibold mb-2">
-                {item}
-              </p>
+              <Link to="/depositAddress">
+                <p key={index} className="text-sm font-semibold mb-4">
+                  {item}
+                </p>
+              </Link>
             ))}
           </div>
         </div>

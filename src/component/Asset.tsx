@@ -1,4 +1,9 @@
-import { FaEye, FaTradeFederation, FaWallet } from "react-icons/fa6";
+import {
+  FaEye,
+  FaEyeSlash,
+  FaTradeFederation,
+  FaWallet,
+} from "react-icons/fa6";
 import { useState } from "react";
 
 type VisibilityState = {
@@ -33,7 +38,17 @@ export const Asset = () => {
             <div>
               <h2 className="flex items-center gap-2 text-2xl">
                 Total Equity
-                <FaEye onClick={() => toggleVisibility("totalEquity")} />
+                {isVisible.totalEquity ? (
+                  <FaEye
+                    onClick={() => toggleVisibility("totalEquity")}
+                    title="Hide"
+                  />
+                ) : (
+                  <FaEyeSlash
+                    onClick={() => toggleVisibility("totalEquity")}
+                    title="Show"
+                  />
+                )}
               </h2>
               {isVisible.totalEquity ? (
                 <>
@@ -46,7 +61,7 @@ export const Asset = () => {
                 <h1>******</h1>
               )}
               <p>
-                Todays P&L -2.41 <span>USD</span>
+                Today's P&L -2.41 <span>USD</span>
               </p>
             </div>
           </div>
@@ -55,7 +70,17 @@ export const Asset = () => {
         {/* second card */}
         <div className="py-4 bg-gray-800 rounded-lg flex justify-between items-center p-2 text-lg w-full mt-2">
           <p>Wallet balance</p>
-          <FaWallet onClick={() => toggleVisibility("walletBalance")} />
+          {isVisible.walletBalance ? (
+            <FaWallet
+              onClick={() => toggleVisibility("walletBalance")}
+              title="Hide"
+            />
+          ) : (
+            <FaEye
+              onClick={() => toggleVisibility("walletBalance")}
+              title="Show"
+            />
+          )}
           {isVisible.walletBalance ? <p>0.00 USD</p> : <p>******</p>}
         </div>
         {/* third card */}
@@ -87,7 +112,7 @@ export const Asset = () => {
                 Hide zero balance customize collateral
               </span>
             </div>
-            <div className="bg-gray-800  p-4 py-14 rounded-md">
+            <div className="bg-gray-800 p-4 py-14 rounded-md">
               <div className="flex justify-between p-2">
                 <div className="text-xl flex items-center justify-center">
                   <div className="h-4 w-4 rounded-full bg-green-500 flex justify-center items-center mb-5 mr-1 text-sm">

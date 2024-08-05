@@ -73,7 +73,7 @@ export const TotalBal: React.FC = () => {
               <h2 className="flex items-center gap-2">
                 Total Assets{" "}
                 <span onClick={toggleVisibility} className="cursor-pointer">
-                  {isHidden ? <FaRegEye /> : <FaRegEyeSlash />}
+                  {isHidden ? <FaRegEyeSlash /> : <FaRegEye />}
                 </span>
               </h2>
               <h1>

@@ -21,6 +21,7 @@ import { SubHeaderComp } from "./component/navbar/navbar/SubHeaderComp.tsx";
 import { AuthProvider } from "./context/AuthContext.tsx"; // Import the AuthProvider
 import { DepositeCrypto } from "./component/DepositeCrypto.tsx";
 import { DepositDetailPage } from "./component/DepositDetailPage.tsx";
+import { DepositAddress } from "./component/DepositAddress.tsx";
 
 const router = createBrowserRouter([
   {
@@ -132,6 +133,14 @@ const router = createBrowserRouter([
         element: (
           <>
             <DepositDetailPage />
+          </>
+        ),
+      },
+      {
+        path: "/depositAddress",
+        element: (
+          <>
+            <DepositAddress />
           </>
         ),
       },

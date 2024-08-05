@@ -9,6 +9,9 @@ export const DepositeCrypto = () => {
     { symbol: "11 HNCH", name: "1inch Network", path: "/depositdetails/1inch" },
     { symbol: "BTC", name: "Bitcoin", path: "/depositdetails/bitcoin" },
     { symbol: "ETH", name: "Ethereum", path: "/depositdetails/ethereum" },
+    { symbol: "BTC", name: "BTC", path: "/depositdetails/Btc" },
+    { symbol: "ETH", name: "Ethereum", path: "/depositdetails/ethereum" },
+    { symbol: "ETH", name: "Ethereum", path: "/depositdetails/ethereum" },
     // Add more items as needed
   ];
 
@@ -78,12 +81,12 @@ export const DepositeCrypto = () => {
             <div
               key={index}
               onClick={handleItemClick}
-              className="block p-2 mt-4 cursor-pointer"
+              className="block p-2 cursor-pointer"
             >
-              <div className="flex items-center gap-1">
+              <div className="flex items-center">
                 <FaCircle />
                 <p>
-                  {item.symbol}{" "}
+                  {item.symbol}
                   <span className="text-sm text-slate-500">{item.name}</span>
                 </p>
               </div>
