@@ -2,16 +2,22 @@ import { useState } from "react";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { CiSearch } from "react-icons/ci";
 import { FaCircle } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 export const DepositeCrypto = () => {
   const searchHistory = [
-    { symbol: "11 HNCH", name: "1inch Network" },
-    { symbol: "BTC", name: "Bitcoin" },
-    { symbol: "ETH", name: "Ethereum" },
+    { symbol: "11 HNCH", name: "1inch Network", path: "/depositdetails/1inch" },
+    { symbol: "BTC", name: "Bitcoin", path: "/depositdetails/bitcoin" },
+    { symbol: "ETH", name: "Ethereum", path: "/depositdetails/ethereum" },
     // Add more items as needed
   ];
 
   const [selectedType, setSelectedType] = useState("Crypto");
+  const navigate = useNavigate();
+
+  const handleItemClick = () => {
+    navigate("/depositcrypto");
+  };
 
   return (
     <div className="flex justify-center items-center bg-gray-950 text-white overflow-y-auto">
@@ -69,7 +75,11 @@ export const DepositeCrypto = () => {
             </div>
           </div>
           {searchHistory.map((item, index) => (
-            <div key={index} className="p-2 mt-4">
+            <div
+              key={index}
+              onClick={handleItemClick}
+              className="block p-2 mt-4 cursor-pointer"
+            >
               <div className="flex items-center gap-1">
                 <FaCircle />
                 <p>

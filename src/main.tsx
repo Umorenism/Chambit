@@ -20,6 +20,7 @@ import { Footer } from "./component/footer/Footer.tsx";
 import { SubHeaderComp } from "./component/navbar/navbar/SubHeaderComp.tsx";
 import { AuthProvider } from "./context/AuthContext.tsx"; // Import the AuthProvider
 import { DepositeCrypto } from "./component/DepositeCrypto.tsx";
+import { DepositDetailPage } from "./component/DepositDetailPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -119,10 +120,18 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/depositcrypto",
+        path: "/depositdetails",
         element: (
           <>
             <DepositeCrypto />
+          </>
+        ),
+      },
+      {
+        path: "/depositcrypto",
+        element: (
+          <>
+            <DepositDetailPage />
           </>
         ),
       },
