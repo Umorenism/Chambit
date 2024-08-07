@@ -22,6 +22,7 @@ import { AuthProvider } from "./context/AuthContext.tsx"; // Import the AuthProv
 import { DepositeCrypto } from "./component/DepositeCrypto.tsx";
 import { DepositDetailPage } from "./component/DepositDetailPage.tsx";
 import { DepositAddress } from "./component/DepositAddress.tsx";
+import { DepositView } from "./component/DepositView.tsx";
 
 const router = createBrowserRouter([
   {
@@ -141,6 +142,14 @@ const router = createBrowserRouter([
         element: (
           <>
             <DepositAddress />
+          </>
+        ),
+      },
+      {
+        path: "/depositview",
+        element: (
+          <>
+            <DepositView />
           </>
         ),
       },

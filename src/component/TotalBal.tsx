@@ -59,7 +59,7 @@ export const TotalBal: React.FC = () => {
   return (
     <div className="bg-gray-950 py-5 text-gray-100">
       <div className="max-w-sm overflow-y-auto bg-slate-950">
-        <div className="text-white px-2 m-2 bg-transparent rounded-lg bg-slate-700 mt-6 flex items-center gap-2">
+        <div className="text-white px-2 m-2 bg-transparent rounded-lg border bg-slate-700 mt-6 flex items-center gap-2">
           <CiSearch />
           <input
             type="text"
@@ -88,7 +88,7 @@ export const TotalBal: React.FC = () => {
           </div>
           <div className="text-sm text-green-700">
             <button
-              className="px-5 py-3 rounded-sm text-white bg-orange-500 font-semibold hover:bg-blue-600 duration-300 ease-in transition cursor-pointer"
+              className="px-5 py-3 rounded-md text-white bg-[#fed503] font-semibold hover:bg-blue-600 duration-300 ease-in transition cursor-pointer"
               onClick={toggleDeposit}
             >
               Deposit

@@ -43,7 +43,7 @@ export const DepositeCrypto = () => {
                 onClick={() => setSelectedType("Crypto")}
                 className={`${
                   selectedType === "Crypto"
-                    ? "underline underline-offset-4 text-orange-500"
+                    ? "underline underline-offset-4 text-[#fed503]"
                     : ""
                 }`}
               >
@@ -53,7 +53,7 @@ export const DepositeCrypto = () => {
                 onClick={() => setSelectedType("Fiat")}
                 className={`${
                   selectedType === "Fiat"
-                    ? "underline underline-offset-4 text-orange-500"
+                    ? "underline underline-offset-4 text-[#fed503]"
                     : ""
                 }`}
               >

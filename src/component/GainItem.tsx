@@ -24,8 +24,8 @@ export const GainItem: React.FC = () => {
               key={index}
               className={`mb-5  font-bold cursor-pointer mt-3 relative text-sm ${
                 highlightedIndex === index
-                  ? "text-orange-500"
-                  : "hover:text-orange-500"
+                  ? "text-[#fed503]"
+                  : "hover:text-[#fed503]"
               }`}
               onClick={() => handleHighlight(index)}
             >

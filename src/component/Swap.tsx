@@ -21,7 +21,7 @@ const carditem = [
     icon: (
       <RiUserAddLine
         size={30}
-        className="border border-white rounded-full text-orange-500"
+        className="border border-white rounded-full text-[#fed503]"
       />
     ),
     title: "Invite Friend",
@@ -32,7 +32,7 @@ const carditem = [
     icon: (
       <RiSwapFill
         size={30}
-        className="border border-white rounded-full text-orange-500"
+        className="border border-white rounded-full text-[#fed503]"
       />
     ),
     title: "Swap",
@@ -43,7 +43,7 @@ const carditem = [
     icon: (
       <RiSwapFill
         size={30}
-        className="border border-white rounded-full text-orange-500"
+        className="border border-white rounded-full text-[#fed503]"
       />
     ),
     title: "P2P trading",
@@ -54,7 +54,7 @@ const carditem = [
     icon: (
       <GiWantedReward
         size={30}
-        className="border border-white rounded-full text-orange-500"
+        className="border border-white rounded-full text-[#fed503]"
       />
     ),
     title: "Reward",
@@ -65,7 +65,7 @@ const carditem = [
     icon: (
       <CgMoreO
         size={30}
-        className="border border-white rounded-full text-orange-500"
+        className="border border-white rounded-full text-[#fed503]"
       />
     ),
     title: "More",
