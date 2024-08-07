@@ -2,7 +2,7 @@ import { useState } from "react";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { CiSearch } from "react-icons/ci";
 import { FaCircle } from "react-icons/fa6";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const DepositeCrypto = () => {
   const searchHistory = [
@@ -71,10 +71,18 @@ export const DepositeCrypto = () => {
               <RiDeleteBin5Line />
             </div>
             <div className="p-2 flex gap-4">
-              <button className="px-2 bg-slate-700 rounded-md">PIXFI</button>
-              <button className="px-2 bg-slate-700 rounded-md">USDT</button>
-              <button className="px-2 bg-slate-700 rounded-md">BNB</button>
-              <button className="px-2 bg-slate-700 rounded-md">SQL</button>
+              <Link to="/depositcrypto">
+                <button className="px-2 bg-slate-700 rounded-md">PIXFI</button>
+              </Link>
+              <Link to="/depositcrypto">
+                <button className="px-2 bg-slate-700 rounded-md">USDT</button>
+              </Link>
+              <Link to="/depositcrypto">
+                <button className="px-2 bg-slate-700 rounded-md">BNB</button>
+              </Link>
+              <Link to="/depositcrypto">
+                <button className="px-2 bg-slate-700 rounded-md">SQL</button>
+              </Link>
             </div>
           </div>
           {searchHistory.map((item, index) => (

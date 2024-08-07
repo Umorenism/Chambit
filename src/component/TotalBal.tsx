@@ -122,7 +122,7 @@ export const TotalBal: React.FC = () => {
               <button className="w-full px-4 py-2 text-left bg-gray-700 text-white rounded-md hover:bg-gray-600">
                 <div className="flex gap-2">
                   <FaCircle className="mt-1" />
-                  <Link to="/depositcrypto">
+                  <Link to="/depositdetails">
                     <div>
                       <h1>Deposit Crypto</h1>
                       <p className="text-sm">

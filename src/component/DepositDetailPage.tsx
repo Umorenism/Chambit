@@ -47,7 +47,7 @@ export const DepositDetailPage = () => {
           </div>
           <div className="p-2 mt-4">
             {textItems.map((item, index) => (
-              <Link to="/depositAddress">
+              <Link to="/depositview">
                 <p key={index} className="text-sm font-semibold mb-4">
                   {item}
                 </p>
