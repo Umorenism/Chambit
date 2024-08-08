@@ -1,6 +1,7 @@
-import { FaCircle } from "react-icons/fa6";
+import { RiErrorWarningFill } from "react-icons/ri";
 import { MdOutlineCancel } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
+import Typewriter from "typewriter-effect";
 
 const textItems = [
   "ERC20",
@@ -36,13 +37,19 @@ export const DepositDetailPage = () => {
         </div>
         <div className="min-h-screen overflow-y-auto w-full max-w-sm h-auto mt-14">
           <div className="mt-1 p-2">
-            <div className="bg-slate-700 py-3 px-4 rounded-md shadow-md flex gap-1">
-              <FaCircle />
+            <div className="bg-slate-800 py-3 px-4 rounded-md shadow-md flex gap-1">
+              <RiErrorWarningFill className="mt-1 text-orange-500" />
 
-              <p className="text-sm text-gray-300">
-                Make sure that the chain type you make the deposit to is the one
-                you make withdrawals from.
-              </p>
+              <Typewriter
+                options={{
+                  strings: [
+                    "Make sure that the chain type you make the deposit to is the one",
+                    "you make withdrawals from.",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
             </div>
           </div>
           <div className="p-2 mt-4">
