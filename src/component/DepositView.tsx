@@ -79,6 +79,7 @@ export const DepositView = () => {
               </div>
             )}
           </div>
+
           <CardQRC />
           <hr className="border-gray-700" />
           <div className="bg-gray-950 py-4 p-2 rounded-md shadow-lg">

@@ -2,7 +2,6 @@
 import ReactDOM from "react-dom/client";
 import { App } from "./App.tsx";
 import "./index.css";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home } from "./page/Home.tsx";
 import { Login } from "./Login/Login.tsx";
@@ -18,30 +17,19 @@ import { GetStarted } from "./component/GetStarted.tsx";
 import { Navbar } from "./component/navbar/navbar/Navbar.tsx";
 import { Footer } from "./component/footer/Footer.tsx";
 import { SubHeaderComp } from "./component/navbar/navbar/SubHeaderComp.tsx";
-import { AuthProvider } from "./context/AuthContext.tsx"; // Import the AuthProvider
+import { AuthProvider } from "./context/AuthContext.tsx";
 import { DepositeCrypto } from "./component/DepositeCrypto.tsx";
 import { DepositDetailPage } from "./component/DepositDetailPage.tsx";
-
 import { DepositView } from "./component/DepositView.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-
     children: [
-      {
-        path: "/",
-        element: <GetStarted />,
-      },
-      {
-        path: "/login",
-        element: <Login />,
-      },
-      {
-        path: "/subHead",
-        element: <SubHeaderComp />,
-      },
+      { path: "/", element: <GetStarted /> },
+      { path: "/login", element: <Login /> },
+      { path: "/subHead", element: <SubHeaderComp /> },
       {
         path: "/signup",
         element: (
@@ -123,28 +111,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/depositdetails",
-        element: (
-          <>
-            <DepositeCrypto />
-          </>
-        ),
+        element: <DepositeCrypto />,
       },
       {
         path: "/depositcrypto",
-        element: (
-          <>
-            <DepositDetailPage />
-          </>
-        ),
+        element: <DepositDetailPage />,
       },
-
       {
         path: "/depositview",
-        element: (
-          <>
-            <DepositView />
-          </>
-        ),
+        element: <DepositView />,
       },
       {
         path: "/chart",
@@ -162,8 +137,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <AuthProvider>
-    {" "}
-    {/* Wrap the RouterProvider with AuthProvider */}
     <RouterProvider router={router} />
   </AuthProvider>
 );

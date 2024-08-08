@@ -14,6 +14,13 @@ type VisibilityState = {
   kok: boolean;
 };
 
+const iconlist = [
+  {
+    name: "USDT",
+    symbols: "$",
+    subName: "Theater KOK",
+  },
+];
 export const Asset = () => {
   const [isVisible, setIsVisible] = useState<VisibilityState>({
     totalEquity: true,
@@ -112,73 +119,75 @@ export const Asset = () => {
                 Hide zero balance customize collateral
               </span>
             </div>
-            <div className="bg-gray-800 p-4 py-14 rounded-md">
-              <div className="flex justify-between p-2">
-                <div className="text-xl flex items-center justify-center">
-                  <div className="h-4 w-4 rounded-full bg-green-500 flex justify-center items-center mb-5 mr-1 text-sm">
-                    T
+            {iconlist.map((item, index) => (
+              <div className="bg-gray-800 p-4 py-14 rounded-md" key={index}>
+                <div className="flex justify-between p-2">
+                  <div className="text-xl flex items-center justify-center">
+                    <div className="h-4 w-4 rounded-full bg-green-500 flex justify-center items-center mb-5 mr-1 text-sm">
+                      {item.symbols}
+                    </div>
+                    <div className="flex flex-col">
+                      <span>{item.name}</span>
+                      <span className="text-sm ml-1"> {item.subName}</span>
+                    </div>
                   </div>
-                  <div className="flex flex-col">
-                    <span>USDT</span>
-                    <span className="text-sm ml-1">Tether USDT</span>
+                  <div onClick={() => toggleVisibility("usdt")}>
+                    {isVisible.usdt ? (
+                      <>
+                        <p>0.34457</p>
+                        <h5>=3.49 {item.name}</h5>
+                      </>
+                    ) : (
+                      <p>******</p>
+                    )}
                   </div>
                 </div>
-                <div onClick={() => toggleVisibility("usdt")}>
-                  {isVisible.usdt ? (
-                    <>
-                      <p>0.34457</p>
-                      <h5>=3.49 USD</h5>
-                    </>
-                  ) : (
-                    <p>******</p>
-                  )}
-                </div>
-              </div>
 
-              <div className="flex justify-between p-2">
-                <div className="text-xl flex items-center justify-center">
-                  <div className="h-4 w-4 rounded-full bg-blue-500 flex justify-center items-center mb-5 mr-1 text-sm">
-                    $
+                <div className="flex justify-between p-2">
+                  <div className="text-xl flex items-center justify-center">
+                    <div className="h-4 w-4 rounded-full bg-blue-500 flex justify-center items-center mb-5 mr-1 text-sm">
+                      {item.symbols}
+                    </div>
+                    <div className="flex flex-col">
+                      <span>{item.name}</span>
+                      <span className="text-sm ml-1">{item.subName}</span>
+                    </div>
                   </div>
-                  <div className="flex flex-col">
-                    <span>USDC</span>
-                    <span className="text-sm ml-1">USD Coin</span>
+                  <div onClick={() => toggleVisibility("usdc")}>
+                    {isVisible.usdc ? (
+                      <>
+                        <p>0.34457</p>
+                        <h5>=3.49 {item.name}</h5>
+                      </>
+                    ) : (
+                      <p>******</p>
+                    )}
                   </div>
                 </div>
-                <div onClick={() => toggleVisibility("usdc")}>
-                  {isVisible.usdc ? (
-                    <>
-                      <p>0.34457</p>
-                      <h5>=3.49 USD</h5>
-                    </>
-                  ) : (
-                    <p>******</p>
-                  )}
-                </div>
-              </div>
 
-              <div className="flex justify-between p-2">
-                <div className="text-xl flex items-center justify-center">
-                  <div className="h-4 w-4 rounded-full bg-green-500 flex justify-center items-center mb-5 mr-1 text-sm">
-                    T
+                <div className="flex justify-between p-2">
+                  <div className="text-xl flex items-center justify-center">
+                    <div className="h-4 w-4 rounded-full bg-green-500 flex justify-center items-center mb-5 mr-1 text-sm">
+                      {item.symbols}
+                    </div>
+                    <div className="flex flex-col">
+                      <span>{item.name}</span>
+                      <span className="text-sm ml-1">{item.subName}</span>
+                    </div>
                   </div>
-                  <div className="flex flex-col">
-                    <span>KOK</span>
-                    <span className="text-sm ml-1">KOK</span>
+                  <div onClick={() => toggleVisibility("kok")}>
+                    {isVisible.kok ? (
+                      <>
+                        <p>0.34457</p>
+                        <h5>=3.49 {item.name}</h5>
+                      </>
+                    ) : (
+                      <p>******</p>
+                    )}
                   </div>
-                </div>
-                <div onClick={() => toggleVisibility("kok")}>
-                  {isVisible.kok ? (
-                    <>
-                      <p>0.34457</p>
-                      <h5>=3.49 USD</h5>
-                    </>
-                  ) : (
-                    <p>******</p>
-                  )}
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
