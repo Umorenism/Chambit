@@ -21,6 +21,8 @@ import { AuthProvider } from "./context/AuthContext.tsx";
 import { DepositeCrypto } from "./component/DepositeCrypto.tsx";
 import { DepositDetailPage } from "./component/DepositDetailPage.tsx";
 import { DepositView } from "./component/DepositView.tsx";
+import { Withdrawal } from "./component/Withdrawal.tsx";
+import { Finalwithdrawal } from "./component/Finalwithdrawal.tsx";
 
 const router = createBrowserRouter([
   {
@@ -120,6 +122,14 @@ const router = createBrowserRouter([
       {
         path: "/depositview",
         element: <DepositView />,
+      },
+      {
+        path: "/withdrawal",
+        element: <Withdrawal />,
+      },
+      {
+        path: "/finalwithdrawal",
+        element: <Finalwithdrawal />,
       },
       {
         path: "/chart",

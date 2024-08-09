@@ -5,6 +5,7 @@ import {
   FaWallet,
 } from "react-icons/fa6";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 type VisibilityState = {
   totalEquity: boolean;
@@ -93,20 +94,28 @@ export const Asset = () => {
         {/* third card */}
         <div className="py-4 rounded-lg flex justify-between items-center p-2 text-lg w-full mt-2 gap-4">
           <div className="w-full py-4 flex justify-center bg-gray-800 flex-col items-center rounded-md">
-            <FaTradeFederation />
-            <p className="p-1 text-sm">Deposit</p>
+            <Link to="/depositview">
+              <FaTradeFederation />
+              <p className="p-1 text-sm">Deposit</p>
+            </Link>
           </div>
           <div className="w-full py-4 flex justify-center bg-gray-800 flex-col items-center rounded-md">
-            <FaTradeFederation />
-            <p className="p-1 text-sm">Withdraw</p>
+            <Link to="/withdrawal">
+              <FaTradeFederation />
+              <p className="p-1 text-sm">Withdraw</p>
+            </Link>
           </div>
           <div className="w-full py-4 flex justify-center bg-gray-800 flex-col items-center rounded-md">
-            <FaTradeFederation />
-            <p className="p-1 text-sm">Swap</p>
+            <Link to="">
+              <FaTradeFederation />
+              <p className="p-1 text-sm">Swap</p>
+            </Link>
           </div>
           <div className="w-full py-4 flex justify-center bg-gray-800 flex-col items-center rounded-md">
-            <FaTradeFederation />
-            <p className="p-1 text-sm">Stack</p>
+            <Link to="">
+              <FaTradeFederation />
+              <p className="p-1 text-sm">Stack</p>
+            </Link>
           </div>
         </div>
         {/* fourth card */}

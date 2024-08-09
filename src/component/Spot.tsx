@@ -170,7 +170,7 @@ export const Spot = () => {
           </div>
 
           <div className="w-1/2">
-            <div className="flex">
+            <div className="flex mt-2">
               <button className="bg-gray-400 w-1/2 py-2 rounded-md">Buy</button>
               <button className="bg-red-500 w-1/2 py-2 rounded-md">Sell</button>
             </div>
